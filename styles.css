@@ -1,14 +1,36 @@
 @import url(/*<!--Sacar fuentes de google fonts-->);
 header {
-    background-color: aquamarine;
+    background-color: #30343F;
+    display:flex;
+    justify-content:space-between;
+    height: 70px;
+    /*me saca los botones, sino poner 70px*/
+    
+    padding: 10px; 
+}
+body {
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.isologotipo {
+    display:inline-block;
     
 }
-nav, a {
-    color: rgb(0, 0, 0);
+header nav ul li {
+    color: red;
+    display:flex;
+    float:right;
+    padding-left: 10px;
 }
-section {
-    height: 300px;
-    /*background-image: url(./images/funkos-banner.webp);*/
+.nuevos {
+    height: 100%;
+    background-image: url(./images/funkos-banner.webp);
+    width:100%;
+    background-size:cover;
+    display:table;
+
 }
 section h3 {
     font-size: 60px;
@@ -19,5 +41,38 @@ section p {
     color: black;
 }
 footer {
-    background-color: aquamarine;
+    background-color: #30343F;
+    color:aliceblue;
+}
+footer section nav ul li{
+    color: aliceblue;
+}
+.card{
+    width:380px;
+    margin: 10rem auto;
+    border-radius: 10px;
+    position:relative;
+}
+
+.tab {
+    position:absolute;
+    
+}
+.coleccion {
+    padding: 20em;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    
+
+}
+.titulo-coleccion{
+    color: #111111;
+    font-size: larger;
+}
+.img-coleccion {
+    display: inline-block;
+    border: 10px #111111;
+    box-align: right;
+    padding-left: 1rem;
 }
