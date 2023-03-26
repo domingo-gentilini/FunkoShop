@@ -15,14 +15,16 @@
             <img src="./images/branding/logo_light_horizontal.svg" alt="Isologotipo"><!--logo-->
             </a>
         </picture>
-    <ul><!--menu de navegacion-->
-    <li><a href="./pages/shop.html"></a>Shop</li>
-    <li><a href="./pages/contacto.html"></a>Contacto</li>
-    <li><a href="./pages/login.html"></a>Login</li>
-    <li><a href="./pages/cart.html">
+    <!--menu de navegacion-->
+    <article>
+    <a href="./pages/contacto.html">Contacto</a>
+    <a href="./pages/login.html">Login</a>
+    <a href="./pages/shop.html">Shop</a>
+    <a href="./pages/cart.html">
         <img src="./images/icons/cart-icon.svg" alt="Icono Carrito">
-    </a></li>
-   </ul>
+    </a>
+    </article>
+   
     
     </nav>
    </header> 
@@ -39,8 +41,8 @@
         <p>Disfruta de una saga que sigue agregando personajes a su colección.</p>
         <a href="./pages/shop.html"><button>Ver Coleccion</button></a>
         </article>
-        <picture class="img-coleccion">
-            <img src="./images/star-wars/bobbafeth-1.webp" alt="Funko Bobbafeth">
+        <picture >
+            <img class="img-coleccion" src="./images/star-wars/bobbafeth-1.webp" alt="Funko Bobbafeth">
         </picture>
     </section>
     <section class="coleccion"> <!--Pokemon-->
@@ -51,8 +53,8 @@
         <a href="./pages/shop.html"><button>Ver Coleccion</button></a>
         
         </article>
-        <picture class="img-coleccion">
-            <img src="./images/pokemon/charmander-1.webp" alt="Funko Charmander">
+        <picture">
+            <img class="img-coleccion" src="./images/pokemon/charmander-1.webp" alt="Funko Charmander">
         </picture>
     </section>
     <section class="coleccion"> <!--Harry Potter-->
@@ -61,15 +63,14 @@
         <p>Lograrás vencer al que no debe ser nombrado?</p>
         <a href="./pages/shop.html"><button>Ver Coleccion</button></a>
         </article>
-        <picture class="img-coleccion">
-            <img src="./images/harry-potter/harry-1.webp" alt="Funko Harry">
+        <picture>
+            <img class="img-coleccion" src="./images/harry-potter/harry-1.webp" alt="Funko Harry">
         </picture>
     </section>
-    <section>
+    <section class="carroussel">
         <h2>Ultimos Lanzamientos</h2> <!--Slider-->
-        <ul>
-            <li>
-                <article>
+        
+            <article class="carroussel-card">
                     <a href="">
                         <picture> 
                             <img src="./images/star-wars/trooper-1.webp" alt="Funko StormTrooper LightSaber">
@@ -81,10 +82,9 @@
                             <p>6 Cuotas sin interés</p>
                         </div>
                     </a>
-                </article>
-            </li>
-            <li>
-                <article>
+            </article>
+           
+            <article class="carroussel-card">
                     <a href="">
                     <picture> 
                         <img src="./images/pokemon/pidgeotto-1.webp" alt="Funko Pidgeotto">
@@ -97,9 +97,8 @@
                     </div>
                 </a>
             </article>
-            </li>
-            <li>
-                <article>
+           
+            <article class="carrousel-card"> 
                     <a href="">
                     <picture> 
                         <img src="./images/harry-potter/luna-1.webp" alt="Funko Luna Lovegood Lion Mask">
@@ -112,8 +111,6 @@
                     </div>
                 </a>
             </article>
-            </li>
-        </ul>
     </section>
 </body>
 <footer>
