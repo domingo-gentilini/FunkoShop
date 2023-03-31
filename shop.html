@@ -10,30 +10,40 @@
 <body>
     <header>
         <nav>
-            <picture>
+            <picture class="isologotipo">
                 <a href="./index.html">
-                <img src="./images/branding/isotype.svg" alt="Isologotipo"><!--logo-->
+                <img src="./images/branding/logo_light_horizontal.svg" alt="Isologotipo"><!--logo-->
                 </a>
             </picture>
-            <h1>Funkos Mingo</h1>
-        <ul><!--menu de navegacion-->
-        <li><a href="./pages/shop.html"></a>Shop</li>
-        <li><a href="./pages/contacto.html"></a>Contacto</li>
-        <li><a href="./pages/login.html"></a>Login</li>
-        <li><a href="./pages/cart.html">
+        <!--menu de navegacion-->
+        <article>
+        <a href="./pages/contacto.html">Contacto</a>
+        <a href="./pages/login.html">Login</a>
+        <a href="./pages/shop.html">Shop</a>
+        <a href="./pages/cart.html">
             <img src="./images/icons/cart-icon.svg" alt="Icono Carrito">
-        </a></li>
-        </ul>
-        </nav>
-    </header>  
+        </a>
+        </article>
+       </nav>
+       </header> 
     <section><!--panel de busqueda-->
-
-
+        <aside>
+            <form>
+            <p>Buscar</p>
+            <input type="tipo" id="identificador" size="tamaño"
+  name="nombre" value="Item o Categoria"/>
+            <p>Ordenar por</p>
+            <input type="tipo" id="identificador" size="tamaño"
+  name="nombre" value="Mayor a menor"/>
+            <p>Precio</p>
+            <p>Filtrar</p>
+            </form>
+        </aside>
     </section>   
-    <section><!--listado de productos-->
+    <section class="flex-container"><!--listado de productos-->
         <ul>
             <li>
-                <article class="card">
+                <article class="card" class="flex-item">
                     <a href="">
                         <picture> 
                             <img src="./images/star-wars/trooper-1.webp" alt="Funko StormTrooper LightSaber">
@@ -48,7 +58,7 @@
                 </article>
             </li>
             <li>
-                <article class="card">>
+                <article class="card" class="flex-item">
                     <a href="">
                     <picture> 
                         <img src="./images/pokemon/pidgeotto-1.webp" alt="Funko Pidgeotto">
@@ -63,7 +73,7 @@
             </article>
             </li>
             <li>
-                <article class="card">
+                <article class="card" class="flex-item">
                     <a href="">
                     <picture> 
                         <img src="./images/harry-potter/luna-1.webp" alt="Funko Luna Lovegood Lion Mask">
@@ -78,7 +88,7 @@
             </article>
             </li>
             <li>
-                <article class="card">
+                <article class="card" class="flex-item">
                     <a href="">
                         <picture> 
                             <img src="./images/star-wars/trooper-1.webp" alt="Funko StormTrooper LightSaber">
@@ -93,7 +103,7 @@
                 </article>
             </li>
             <li>
-                <article class="card">
+                <article class="card" class="flex-item">
                     <a href="">
                     <picture> 
                         <img src="./images/pokemon/pidgeotto-1.webp" alt="Funko Pidgeotto">
@@ -108,7 +118,7 @@
             </article>
             </li>
             <li>
-                <article class="card">
+                <article class="card" class="flex-item">
                     <a href="">
                     <picture> 
                         <img src="./images/harry-potter/luna-1.webp" alt="Funko Luna Lovegood Lion Mask">
@@ -123,7 +133,7 @@
             </article>
             </li>
             <li>
-                <article class="card">
+                <article class="card" class="flex-item">
                     <a href="">
                         <picture> 
                             <img src="./images/star-wars/trooper-1.webp" alt="Funko StormTrooper LightSaber">
@@ -138,7 +148,7 @@
                 </article>
             </li>
             <li>
-                <article class="card">
+                <article class="card" class="flex-item">
                     <a href="">
                     <picture> 
                         <img src="./images/pokemon/pidgeotto-1.webp" alt="Funko Pidgeotto">
@@ -153,7 +163,7 @@
             </article>
             </li>
             <li>
-                <article class="card">
+                <article class="card" class="flex-item">
                     <a href="">
                     <picture> 
                         <img src="./images/harry-potter/luna-1.webp" alt="Funko Luna Lovegood Lion Mask">

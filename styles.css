@@ -7,7 +7,7 @@ header {
     width: 100%;
     /*me saca los botones, sino poner 70px*/
     }
-p, h1, h2, h3, h4 {
+a {
     text-decoration: none;
 }
 
@@ -102,7 +102,7 @@ picture{
     display: flex;
     height:min-content;
     width: 100%;
-    float: right;
+    float: left;
     background-color: white;
 }
 .carroussel h2 {
@@ -116,7 +116,7 @@ picture{
     height:3rem;
     border-radius: 10px;
     /*position:relative;*/
-    margin: 5rem auto;
+    margin: 1em auto 1em auto;
     padding: 10px;
     /*box-sizing: border-box;*/
     display: flex;
@@ -127,12 +127,32 @@ picture{
 
 /*SHOP*/
 .card{
-    width:50px;
-    
+    flex: item;
+    width: 5rem;
+    height:3rem;
     border-radius: 10px;
-    position:relative;
-    margin: 5rem auto;
-    padding: 0;
-    box-sizing: border-box;
+    /*position:relative;*/
+    margin: 1em auto 1em auto;
+    padding: 10px;
+    /*box-sizing: border-box;*/
+    display: flex;
+    float: center;
 
+}
+.flex-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.flex-item{
+    flex-direction:row-reverse;
+    flex-wrap:wrap-reverse;
+    justify-content: center;
+}
+
+aside{
+    width: 500px;
+    height: 100%;
+    align-items: flex-start;
 }
