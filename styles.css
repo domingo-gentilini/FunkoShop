@@ -1,9 +1,19 @@
 main{
-  display: block;
+
+  align-items: center;
 }
 header{
     background-color: #30343F;
 }
 footer {
     background-color: #30343F;
+}
+
+table{
+  width: 95%;
+}
+
+.button-coleccion{
+  background: #30343F;
+
 }
