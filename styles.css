@@ -153,6 +153,7 @@ header a, footer a {
   padding: var(--spacing-128);
   background-size: cover; /*que no se repita imagen*/
   background-attachment: fixed; /*fondo fijo al scroll*/
+  background-position: top;
   position: relative;
 }
 
