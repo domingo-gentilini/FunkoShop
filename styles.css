@@ -155,6 +155,7 @@ header a, footer a {
   background-attachment: fixed; /*fondo fijo al scroll*/
   background-position: top;
   position: relative;
+  display:
 }
 
 .hero::before{ /*capa nueva entre imagen y texto*/
@@ -206,4 +207,57 @@ header a, footer a {
   color: var(--light-font-solid);
 }
 
-/*57.21*/
+/*container*/
+
+.main-container {
+  color:var(--dark-solid);
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) ;
+  align-items: center;
+  color:var(--dark-solid); 
+}
+.collection:nth-child(2) .collection__cover{ /*seleciiono segundo seccion*/
+  order: -1;
+}
+.collection__content {
+  color:var(--dark-solid);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+  align-items: start;
+}
+
+.collection__title{
+  color:var(--dark-solid);
+  font-size: var(--font-display);
+  font-family: var(--alternative-font);
+  font-weight: 500;
+}
+
+.collection__text {
+  color:var(--dark-solid);
+  font-size: var(--font-large);
+  font-family: var(--alternative-font);
+  font-weight: 300;
+  border-bottom: 2px solid var(--primary-solid);
+  padding-bottom: var(--spacing-20);
+}
+
+.collection__link {
+  display: inline-block;
+  font-size: var(--font-medium);
+  color: var(--light-font-solid);
+  text-decoration: none;
+  padding: var(--spacing-16) /*aya*/ var(--spacing-36);
+  border-radius: 50px;
+  font-weight: 500;
+  transition: background .3s ease-in-out;
+}
+
+.collection__link:hover {
+  background-color: var(--primary-900);
+  
+}
