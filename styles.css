@@ -82,7 +82,10 @@ header, footer{
   font-family: var(--alternative-font);
   color: var(--dark-solid); 
 }
-
+li{ 
+  list-style: none;
+  margin-left: 0;
+}
 header a, footer a {
   color: var(--light-font-solid);
   padding: var(--spacing-36);
@@ -279,7 +282,7 @@ header a, footer a {
 .slider__items{
   display:flex;
   gap: var(--spacing-24);
-}
+}items
 a{
   text-decoration: none;
 }
@@ -344,7 +347,18 @@ a{
   text-decoration: none;
   color: var(--secondary-solid);
 }
-
+/*footer*/
+.footer{
+  padding: var(--spacing-68);
+}
+.footer__copy{
+  color: var(--light-font-solid);
+  display: inline;
+  text-align: center;
+  margin-top: var(--spacing-36);
+  font-size: var(--font-medium);
+}
+/*animations*/
 @keyframes fade{
   0%{
     opacity: 0;
