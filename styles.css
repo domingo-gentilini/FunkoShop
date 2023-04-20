@@ -42,6 +42,7 @@
   --spacing-68: 6.8rem;
   --spacing-36: 3.6rem;
   --spacing-28: 2.8rem;
+  --spacing-24: 2.4rem;
   --spacing-20: 2.0rem;
   --spacing-16: 1.6rem;
   --spacing-12: 1.2rem;
@@ -126,7 +127,7 @@ header a, footer a {
   width: 300px;
   position: absolute; /*para sacarlo del flujo*/
   background-color: var(--dark-background-solid);
-  
+  z-index: 3; /*para que se vea arriba del hover*/
 }
 
 .submenu__link {
@@ -218,6 +219,7 @@ header a, footer a {
   grid-template-columns: repeat(2, 1fr) ;
   align-items: center;
   color:var(--dark-solid); 
+  padding: var(--spacing-16)0;
 }
 .collection:nth-child(2) .collection__cover{ /*seleciiono segundo seccion*/
   order: -1;
@@ -244,6 +246,7 @@ header a, footer a {
   font-weight: 300;
   border-bottom: 2px solid var(--primary-solid);
   padding-bottom: var(--spacing-20);
+  width: 100%;
 }
 
 .collection__link {
@@ -259,5 +262,94 @@ header a, footer a {
 
 .collection__link:hover {
   background-color: var(--primary-900);
-  
+}
+
+/*slider*/
+.slider{
+  display:flex;
+  flex-direction: column;
+  gap: var(--spacing-36);
+  margin: var(--spacing-68) auto;
+}
+.slider__title{
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
+  text-transform: uppercase;
+}
+.slider__items{
+  display:flex;
+  gap: var(--spacing-24);
+}
+a{
+  text-decoration: none;
+}
+
+.card-item{
+  text-decoration: none;
+}
+
+.card-item__cover{
+  display: flex;
+  position: relative; /*para que tags no se alineen con body*/
+}
+.card-item__cover img{
+  animation: fade .7s;
+}
+.card-item__tag {
+  font-size: var(--font-small);
+  font-weight: 500;
+  font-family: var(--base-font);
+  background-color: var(--primary-solid);
+  color: var(--light-font-solid);
+  padding: var(--spacing-8) var(--spacing-16);
+  text-transform: uppercase;
+  position: absolute; /*la manda arriba*/
+  right: 0;
+}
+.card-item__img--back{
+  display: none; /*la esonde hasta hacer hover*/
+}
+.card-item__cover:hover .card-item__img--front{
+  display: none;
+}
+
+.card-item__cover:hover .card-item__img--back{
+  display: block;
+}
+
+.card-item__content{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  padding: var(--spacing-16);
+  text-decoration: none;
+}
+
+.card-item__license{
+  font-size: var(--font-xsmall);
+  font-weight: 500;
+  text-decoration: none;
+}
+.card-item__name{
+  font-size: var(--font-medium);
+  font-weight: 700;
+}
+.card-item__price{
+  font-size: var(--font-small);
+  text-decoration: none;
+}
+.card-item__promo{
+  font-size: var(--font-xsmall);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--secondary-solid);
+}
+
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
