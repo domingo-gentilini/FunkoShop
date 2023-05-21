@@ -387,9 +387,10 @@ a{
 
 .formulario-aside{
   float: left;
-  display: inline-block;
+  display: inline;
   max-width: 20%;
   gap: 5rem;
+  height: 100%;
 }
 .formulario-aside p {
   font-family: var(--base-font);
@@ -401,11 +402,18 @@ a{
 
 .formulario-aside label {
   color: var(--dark-900);
-
+  
+}
+.formulario-precio{
+  display: inline;
+  width:fit-content;
+}
+.formulario-precio input{
+  width: 30px;
 }
 
 .formulario-filtrar {
-  display: inline-block;
+  display: inline;
 }
 
 .main-shop {
@@ -428,8 +436,6 @@ a{
 }
 .shop__card-item{
   text-decoration: none;
- 
-  
 }
 
 
@@ -439,7 +445,7 @@ a{
     /*colores
   --primary-solid:#FF3333;
   --primary-900:rgba(255, 51, 51, 0.9);
-  --primary-500:rgba(255, 51, 51, 0.5);
+  --primary-50.hlkljkmjpgfgkjoiug,koj gmfhmlhmggmggn0:rgba(255, 51, 51, 0.5);
   --primary-300:rgba(255, 51, 51, 0.3);
 
   --secondary-solid:#1D84B5;

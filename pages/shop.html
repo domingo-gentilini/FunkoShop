@@ -34,25 +34,31 @@
             </ul>
         </nav>
     </header>
+    <div class="container">
+    <div>
     <aside class="formulario-aside">
         <div class="formulario-buscar">
+            <br>
             <label for="Busqueda"><p>Buscar:</p></label>
-                <input type="text" placeholder="Item o categoría"> 
+            <input type="text" placeholder="Item o categoría"> 
         </div>
         <div class="formulario-ordenar">
-            <label for="Ordenar"><p>Ordenar por:</p></label>
-                <select id="filtro" name="filtro" input type="" placeholder="Ordenar">
+            <label for="ordenar"><p>Ordenar por:</p></label>
+                <select id="filtro" name="filtro" input type="" placeholder="ordenar">
                 <option value="Precio de menor a mayor">Precio de menor a mayor</option>
                 <option value="Cant. Cuotas">Cantidad Cuotas</option>
-                <option value="Categoría">Categoría</option> <br>
-        </div><br>
-            
-        <div class="formulario-precio"><p>Precio</p>
-            <label for="precio-min">MIN</label>
-            <input type="number" placeholder="0">
-            <label for="precio-max"> - MAX</label>
-            <input type="number" placeholder="0" >
+                <option value="Categoría">Categoría</option>
+                </select>
         </div>
+        <br>
+        <div class="formulario-precio">
+            <label for="precio"><p>Precio</p></label><br>
+            <label class="preciomin" for="precio-min">MIN</label>
+            <input type="number" placeholder="0">
+            <label class="preciomax" for="precio-max">- MAX</label>
+            <input type="number" placeholder="0">
+        </div>
+        <br>
         <div class="formulario-filtrar">
             <label for="filtrar"><p>Filtrar</p></label><br>
             <input type="radio" id="nuevos" name="filtro-producto" value="nuevos" >
@@ -65,9 +71,11 @@
             <label for="favoritos">Favoritos</label><br>
         </div>
     </aside>
+    </div>
+
     <main class="container main-container main-shop">
         <container>
-            <ul class="shop__container container">
+            <ul class="shop__container">
                 <li class="shop__card col-3 inline">
                 <article class="shop__card-item">
                     <a class="card-item" href="">
@@ -209,6 +217,7 @@
         <container>
             <!--PAGINACION-->
         </container>
+    </div>
     </main>
     <footer class="footer">
         <nav class="navbar container">
