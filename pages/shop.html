@@ -4,42 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css" rel="stylesheet">
     <title>Shop</title>
 </head>
 <body>
     <header>
-        <nav>
-            <picture>
+        <nav class="container navbar">
+            <picture class="navbar__logo">
                 <a href="index.html">
                     <img src="../images/branding/logo_light_horizontal.svg" alt="isologotipo">
                 </a>
             </picture>            
             
-            <ul>
-                <li>
-                    <a href="./pages/shop.html">SHOP</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/shop.html">SHOP <iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
                 </li>
-                <li>
-                    <a href="./pages/.contact.html">CONTACTO</a>
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/.contact.html">CONTACTO</a>
                 </li>
-                <li>
-                    <a href="./pages/.login.html">LOGIN</a>
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/.login.html">LOGIN</a>
                 </li>
-                <li>
-                    <a href="./pages/.cart.html">
+                <li class="navbar__item">
+                    <a class="navbar__cart" href="./pages/.cart.html">
                         <img src="../images/icons/cart-icon.svg" alt="">
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-    <aside class="formulario">
+    <aside class="formulario-aside">
         <div class="formulario-buscar">
-            <label for="Busqueda">Buscar:</label>
+            <label for="Busqueda"><p>Buscar:</p></label>
                 <input type="text" placeholder="Item o categoría"> 
         </div>
         <div class="formulario-ordenar">
-            <label for="Ordenar">Ordenar por:</label>
+            <label for="Ordenar"><p>Ordenar por:</p></label>
                 <select id="filtro" name="filtro" input type="" placeholder="Ordenar">
                 <option value="Precio de menor a mayor">Precio de menor a mayor</option>
                 <option value="Cant. Cuotas">Cantidad Cuotas</option>
@@ -53,7 +54,7 @@
             <input type="number" placeholder="0" >
         </div>
         <div class="formulario-filtrar">
-            <label for="filtrar">Filtrar</label><br>
+            <label for="filtrar"><p>Filtrar</p></label><br>
             <input type="radio" id="nuevos" name="filtro-producto" value="nuevos" >
             <label for="nuevos">Nuevos</label><br>
             <input type="radio" id="ofertas" name="filtro-producto" value="ofertas" >
@@ -64,13 +65,14 @@
             <label for="favoritos">Favoritos</label><br>
         </div>
     </aside>
-    <main>
+    <main class="container main-container main-shop">
         <container>
-            <ul>
-                <li>
-                <article>
-                    <a href="">
-                    <picture>
+            <ul class="shop__container container">
+                <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
                         <img src="../images/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER">
                     </picture>
                     <div>
@@ -81,10 +83,11 @@
                     </div>
                 </a></article>
             </li>
-            <li>
-                <article>
-                    <a href="">
-                    <picture>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
                         <img src="../images/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO">
                     </picture>
                     <div>
@@ -95,10 +98,11 @@
                     </div>
                 </a></article>
             </li>
-            <li>
-                <article>
-                    <a href="">
-                    <picture>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
                         <img src="../images/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK">
                     </picture>
                     <div>
@@ -109,10 +113,11 @@
                     </div>
                 </a></article>
             </li>
-            <li>
-                <article>
-                    <a href="">
-                    <picture>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
                         <img src="../images/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER">
                     </picture>
                     <div>
@@ -123,10 +128,11 @@
                     </div>
                 </a></article>
             </li>
-            <li>
-                <article>
-                    <a href="">
-                    <picture>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
                         <img src="../images/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO">
                     </picture>
                     <div>
@@ -137,10 +143,11 @@
                     </div>
                 </a></article>
             </li>
-            <li>
-                <article>
-                    <a href="">
-                    <picture>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
                         <img src="../images/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK">
                     </picture>
                     <div>
@@ -151,10 +158,11 @@
                     </div>
                 </a></article>
             </li>
-            <li>
-                <article>
-                    <a href="">
-                    <picture>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
                         <img src="../images/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER">
                     </picture>
                     <div>
@@ -165,10 +173,11 @@
                     </div>
                 </a></article>
             </li>
-            <li>
-                <article>
-                    <a href="">
-                    <picture>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
                         <img src="../images/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO">
                     </picture>
                     <div>
@@ -179,10 +188,11 @@
                     </div>
                 </a></article>
             </li>
-            <li>
-                <article>
-                    <a href="">
-                    <picture>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
                         <img src="../images/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK">
                     </picture>
                     <div>
@@ -200,20 +210,20 @@
             <!--PAGINACION-->
         </container>
     </main>
-    <footer>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./pages/shop.html">SHOP</a>
+    <footer class="footer">
+        <nav class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/shop.html">SHOP</a>
                 </li>
-                <li>
-                    <a href="./pages/.contact.html">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/.contact.html">CONTACTO</a>
                 </li>
-                <li>
-                    <a href="./pages/.login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/.login.html">LOGIN</a>
                 </li>
-                <li>
-                    <a href="./pages/.register.html">REGISTRARSE</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/.register.html">REGISTRARSE</a>
                 </li>
             </ul>
             <picture>
@@ -221,9 +231,11 @@
                     <img src="../images/branding/isotype.svg" alt="isotipo">
                 </a>
             </picture>  
-            <p>All rights reserved 2023 - MingoShop &copy;</p>
         </nav>
+        <div>
+        <p class="footer__copy">All rights reserved 2023 - MingoShop &copy;</p>
+        </div>
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 </body>
 </html>

@@ -67,7 +67,11 @@ img{
   width: 100%; /*para que tome el ancho del contenedor y no de la imagen*/
   height: 100%;
 }
-
+.card-item__content p, h4{
+  text-decoration: none;
+  color: var(--dark-solid);
+ }
+ 
 .button-coleccion{
   background: var(--dark-background-solid);
 }
@@ -113,6 +117,7 @@ header a, footer a {
   display: inline-block;
   transition: background .3s ease-in-out;
   position: relative; /*para que submenu trabaje aca y no en el body*/
+  text-decoration: none;
 }
 .navbar__link:hover{
   background-color: var(--primary-300);
@@ -124,6 +129,7 @@ header a, footer a {
 }
 .with-submenu:hover .submenu {
   display: block;
+  margin-left: 0;
 }
 .submenu{
   display: none; /*para que no se muestre*/
@@ -131,17 +137,22 @@ header a, footer a {
   position: absolute; /*para sacarlo del flujo*/
   background-color: var(--dark-background-solid);
   z-index: 3; /*para que se vea arriba del hover*/
+  margin-left: 0;
 }
 
 .submenu__link {
   display: block; /*para poder darle tamaño*/
-  padding: var(--spacing-8) var(--spacing-16);
+  padding: var(--spacing-8) 0 var(--spacing-8);
+  margin-left: 0;
   font-size: var(--font-small);
   transition: background .3s ease-in-out;
 }
-
+.submenu__item{
+  margin-left: 0;
+}
 .submenu__link:hover {
   background-color: var(--primary-300);
+  margin-left: 0;
 }
 
 .navbar__cart{
@@ -149,6 +160,10 @@ header a, footer a {
   max-width: 50px;
   max-height: 50px;
 }
+ .shop__container p, h4{
+  text-decoration: none;
+  color: var(--dark-solid);
+ }
 
 /*Hero o banner*/
 
@@ -159,7 +174,6 @@ header a, footer a {
   background-attachment: fixed; /*fondo fijo al scroll*/
   background-position: top;
   position: relative;
-  display:
 }
 
 .hero::before{ /*capa nueva entre imagen y texto*/
@@ -353,11 +367,12 @@ a{
 }
 .footer__copy{
   color: var(--light-font-solid);
-  display: inline;
+  display: flex inline;
   text-align: center;
   margin-top: var(--spacing-36);
   font-size: var(--font-medium);
 }
+
 /*animations*/
 @keyframes fade{
   0%{
@@ -366,4 +381,104 @@ a{
   100%{
     opacity: 1;
   }
+}
+
+/*SHOP*/
+
+.formulario-aside{
+  float: left;
+  display: inline-block;
+  max-width: 20%;
+  gap: 5rem;
+}
+.formulario-aside p {
+  font-family: var(--base-font);
+  font-size: var(--font-jumbo);
+  color: var(--dark-font-solid);
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.formulario-aside label {
+  color: var(--dark-900);
+
+}
+
+.formulario-filtrar {
+  display: inline-block;
+}
+
+.main-shop {
+  display:flex;
+  flex-direction:column;
+  gap: var(--spacing-36);
+  margin: var(--spacing-68) auto;
+  max-width: 1200px;
+  
+}
+.shop__container{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  gap: var(--spacing-24);
+  
+}
+.shop__card{
+  width: 30%;
+}
+.shop__card-item{
+  text-decoration: none;
+ 
+  
+}
+
+
+
+
+  
+    /*colores
+  --primary-solid:#FF3333;
+  --primary-900:rgba(255, 51, 51, 0.9);
+  --primary-500:rgba(255, 51, 51, 0.5);
+  --primary-300:rgba(255, 51, 51, 0.3);
+
+  --secondary-solid:#1D84B5;
+  --secondary-900:rgba(29, 132, 181, 0.9);
+  --secondary-500: rgba(29,132,181,0.5);
+  --secondary-300: rgba(29,132,181,0.3);
+
+  --dark-solid:#1f1f1f;
+  --dark-900:rgba(31, 31, 31, 0.9);
+  --dark-500:rgba(31, 31, 31, 0.5);
+  --dark-300:rgba(31, 31, 31, 0.3);
+
+  --dark-background-solid:#30343f;
+  --dark-background-900:rgba(48, 52, 63, 0.9);/*no me lo toma*/
+  /*--light-background-solid:#FAFAFF;
+  --light-font-solid: #FFFFFF;
+
+  /*Tipografias*/
+  /*--base-font: 'Inter', sans-serif;
+  --alternative-font:'Ŕaleway', sans-serif;
+
+  /*Tamaño de fuente*/
+  /*fontsize de 10px*/
+  /*--font-display: 4.6em;
+  --font-jumbo: 3.8em;
+  --font-xlarge: 3em;
+  --font-large: 2.4em;
+  --font-medium: 1.8em;
+  --font-small: 1.6em;
+  --font-xsmall: 1.2em;
+ 
+  /*Spacings*/
+  /*--spacing-128:12.8rem;
+  --spacing-68: 6.8rem;
+  --spacing-36: 3.6rem;
+  --spacing-28: 2.8rem;
+  --spacing-24: 2.4rem;
+  --spacing-20: 2.0rem;
+  --spacing-16: 1.6rem;
+  --spacing-12: 1.2rem;
+  --spacing-8: 0.8rem;
 }
