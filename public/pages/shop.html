@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css" rel="stylesheet">
+    <title>Shop</title>
+</head>
+<body>
+    <header>
+        <nav class="container navbar">
+            <picture class="navbar__logo">
+                <a href="index.html">
+                    <img src="../images/branding/logo_light_horizontal.svg" alt="isologotipo">
+                </a>
+            </picture>            
+            
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/shop.html">SHOP <iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+                </li>
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/.contact.html">CONTACTO</a>
+                </li>
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/.login.html">LOGIN</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__cart" href="./pages/.cart.html">
+                        <img src="../images/icons/cart-icon.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+    <div>
+    <aside class="formulario-aside" method="POST">
+        <div class="formulario-buscar">
+            <br>
+            <label for="Busqueda"><p>Buscar:</p></label>
+            <input type="text" placeholder="Item o categoría"> 
+        </div>
+        <div class="formulario-ordenar">
+            <label for="ordenar"><p>Ordenar por:</p></label>
+                <select id="filtro" name="filtro" input type="" placeholder="ordenar">
+                <option value="Precio de menor a mayor">Precio de menor a mayor</option>
+                <option value="Cant. Cuotas">Cantidad Cuotas</option>
+                <option value="Categoría">Categoría</option>
+                </select>
+        </div>
+        <br>
+        <div class="formulario-precio">
+            <label for="precio"><p>Precio</p></label><br>
+            <label class="preciomin" for="precio-min">MIN</label>
+            <input type="number" placeholder="0">
+            <label class="preciomax" for="precio-max">- MAX</label>
+            <input type="number" placeholder="0">
+        </div>
+        <br>
+        <div class="formulario-filtrar">
+            <label for="filtrar"><p>Filtrar</p></label><br>
+            <input type="radio" id="nuevos" name="filtro-producto" value="nuevos" >
+            <label for="nuevos">Nuevos</label><br>
+            <input type="radio" id="ofertas" name="filtro-producto" value="ofertas" >
+            <label for="ofertas">Ofertas</label><br>
+            <input type="radio" id="edicion-especial" name="filtro-producto" value="edicion-especial" >
+            <label for="edicion-especial">Edición Especial</label><br>
+            <input type="radio" id="favoritos" name="filtro-producto" value="favoritos" >
+            <label for="favoritos">Favoritos</label><br>
+        </div>
+    </aside>
+    </div>
+
+    <main class="container main-container main-shop">
+        <container>
+            <ul class="shop__container">
+                <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
+                        <img src="../images/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER">
+                    </picture>
+                    <div>
+                        <p>Star Wars</p><!--universo-->
+                        <h4>STORMTROOPER LIGHTSABER</h4><!--titulo prod-->
+                        <p>$12.999</p><!--precio-->
+                        <p>18 Cuotas sin interés</p>
+                    </div>
+                </a></article>
+            </li>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
+                        <img src="../images/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO">
+                    </picture>
+                    <div>
+                        <p>Pókemon</p><!--universo-->
+                        <h4>PIDGEOTTO</h4><!--titulo prod-->
+                        <p>$12.999</p><!--precio-->
+                        <p>18 Cuotas sin interés</p>
+                    </div>
+                </a></article>
+            </li>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
+                        <img src="../images/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK">
+                    </picture>
+                    <div>
+                        <p>Harry Potter</p><!--universo-->
+                        <h4>LUNA LOVEGOOD LION MASK</h4><!--titulo prod-->
+                        <p>$12.999</p><!--precio-->
+                        <p>18 Cuotas sin interés</p>
+                    </div>
+                </a></article>
+            </li>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
+                        <img src="../images/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER">
+                    </picture>
+                    <div>
+                        <p>Star Wars</p><!--universo-->
+                        <h4>STORMTROOPER LIGHTSABER</h4><!--titulo prod-->
+                        <p>$12.999</p><!--precio-->
+                        <p>18 Cuotas sin interés</p>
+                    </div>
+                </a></article>
+            </li>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
+                        <img src="../images/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO">
+                    </picture>
+                    <div>
+                        <p>Pókemon</p><!--universo-->
+                        <h4>PIDGEOTTO</h4><!--titulo prod-->
+                        <p>$12.999</p><!--precio-->
+                        <p>18 Cuotas sin interés</p>
+                    </div>
+                </a></article>
+            </li>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
+                        <img src="../images/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK">
+                    </picture>
+                    <div>
+                        <p>Harry Potter</p><!--universo-->
+                        <h4>LUNA LOVEGOOD LION MASK</h4><!--titulo prod-->
+                        <p>$12.999</p><!--precio-->
+                        <p>18 Cuotas sin interés</p>
+                    </div>
+                </a></article>
+            </li>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
+                        <img src="../images/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER">
+                    </picture>
+                    <div>
+                        <p>Star Wars</p><!--universo-->
+                        <h4>STORMTROOPER LIGHTSABER</h4><!--titulo prod-->
+                        <p>$12.999</p><!--precio-->
+                        <p>18 Cuotas sin interés</p>
+                    </div>
+                </a></article>
+            </li>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
+                        <img src="../images/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO">
+                    </picture>
+                    <div>
+                        <p>Pókemon</p><!--universo-->
+                        <h4>PIDGEOTTO</h4><!--titulo prod-->
+                        <p>$12.999</p><!--precio-->
+                        <p>18 Cuotas sin interés</p>
+                    </div>
+                </a></article>
+            </li>
+            <li class="shop__card col-3 inline">
+                <article class="shop__card-item">
+                    <a class="card-item" href="">
+                    <picture class="card-item__cover">
+                        <span class="card-item__tag">Nuevo</span>
+                        <img src="../images/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK">
+                    </picture>
+                    <div>
+                        <p>Harry Potter</p><!--universo-->
+                        <h4>LUNA LOVEGOOD LION MASK</h4><!--titulo prod-->
+                        <p>$12.999</p><!--precio-->
+                        <p>18 Cuotas sin interés</p>
+                    </div>
+                </a></article>
+            </li>
+            </ul>
+        </section>
+        </container>
+        <container>
+            <!--PAGINACION-->
+        </container>
+    </div>
+    </main>
+    <footer class="footer">
+        <nav class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/shop.html">SHOP</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/.contact.html">CONTACTO</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/.login.html">LOGIN</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/.register.html">REGISTRARSE</a>
+                </li>
+            </ul>
+            <picture>
+                <a href="index.html">
+                    <img src="../images/branding/isotype.svg" alt="isotipo">
+                </a>
+            </picture>  
+        </nav>
+        <div>
+        <p class="footer__copy">All rights reserved 2023 - MingoShop &copy;</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+</body>
+</html>
