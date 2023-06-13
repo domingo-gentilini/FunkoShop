@@ -1,7 +1,13 @@
-const express = require(`express`);
+const express = require ("express");
 const app = express();
-const PORT = 3001;
+const fs = require ("fs"); 
+const PORT = 3000;
+const itemsRoutes = require('./src/routes/itemsRoutes.js');
+const categoriesRoutes = require('./src/routes/categoriesRoutes.js');
 
 app.use(express.static("public"));
 
-app.listen (PORT, () => console.log(`server corriendo en puerto ${PORT}`)); /*definir puerto y mostrar mensaje*/
+app.use('/', itemsRoutes);
+app.use('/', categoriesRoutes); 
+
+app.listen(PORT,() => console.log(`corriendo en puerto ${PORT}`));
