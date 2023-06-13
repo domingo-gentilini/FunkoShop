@@ -10,38 +10,48 @@
 </head>
 <body>
     <header>
-        <nav>
-            <picture>
+        <nav class="container navbar">
+            <picture class="navbar__logo">
                 <a href="index.html">
                     <img src="/images/branding/logo_light_horizontal.svg" alt="isologotipo">
                 </a>
             </picture>            
-            <ul>
-                <li>
-                    <a href="/pages/shop.html">Salir</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link" href="/pages/shop.html">Salir</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="container">
         <li>
+            <div class="navbar">
             <form action="">
+                <img class="icon" src="/images/icons/search_icon.svg" alt="">
                 <label for="Busqueda"></label>
                 <input href="/pages/admin/admin.html"placeholder="Buscar codigo, nombre o categoría"> 
-                    <img src="/images/icons/search_icon.svg" alt="">
             </form>
+            </div>
+            <br>
         </li>
-
-        <container class="container-table">
-            <table>
+        <container class="container container-table">
+            <nav class="head_table">
+                <div><h3>LISTADO DE PRODUCTOS</h3></div>
+                <div class="button_newProduct">
+                <a href=""> <p>Agregar</p>
+                <img class="icon" src="/images/icons/edit_pencil.svg" alt="">
+                </a>
+                </div>    
+            </nav>
+            <table class="table" >
                 <thead>
                     <tr>
-                  <th class="celda"> ID</th>
-                  <th class="celda"> Código</th>
-                  <th class="celda"> Nombre del producto</th>
-                  <th class="celda"> Categoría</th>
-                  <th class="celda"></th>
-                  <th class="celda"></th>
+                  <th class="head-cell"> ID</th>
+                  <th class="head-cell"> Código</th>
+                  <th class="head-cell"> Nombre del producto</th>
+                  <th class="head-cell"> Categoría</th>
+                  <th class="head-cell"></th>
+                  <th class="head-cell"></th>
                     </tr> <!--cierra fila-->
                     <br>
                 <tbody>
@@ -52,13 +62,13 @@
                     <td class="celda">Star-Wars</td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                        <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                         </a>
                         </picture>
                     </td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                        <img class="icon" class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                         </a>
                         </picture>
                     </td>
@@ -70,12 +80,12 @@
                     <td class="celda">Star-Wars</td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                        <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                         </a>
                         </picture></td>
                         <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                        <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                         </a>
                         </picture>
                     </td>
@@ -87,12 +97,12 @@
                     <td class="celda">Star-Wars</td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                        <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                         </a>
                         </picture></td>
                     <td  class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                        <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                         </a>
                         </picture>
                         </td>
@@ -104,12 +114,12 @@
                     <td class="celda">Star-Wars</td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                        <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                         </a>
                         </picture></td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                        <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                         </a>
                         </picture>
                         </td>
@@ -121,13 +131,13 @@
                     <td class="celda">Pókemon</td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                        <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                         </a>
                         </picture>
                         </td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                        <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                         </a>
                         </picture>
                         </td>
@@ -139,13 +149,13 @@
                       <td class="celda">Pókemon</td>
                       <td class="celda-acc"><picture>
                           <a href="admin.html">
-                          <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                          <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                           </a>
                           </picture>
                           </td>
                       <td class="celda-acc"><picture>
                           <a href="admin.html">
-                          <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                          <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                           </a>
                           </picture>
                         </td>
@@ -157,12 +167,12 @@
                       <td class="celda">Pókemon</td>
                       <td class="celda-acc"><picture>
                           <a href="admin.html">
-                          <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                          <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                           </a>
                           </picture></td>
                         <td class="celda-acc"><picture>
                           <a href="admin.html">
-                          <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                          <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                           </a>
                           </picture>
                         </td>
@@ -174,12 +184,12 @@
                       <td class="celda">Pókemon</td>
                       <td class="celda-acc"><picture>
                           <a href="admin.html">
-                          <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                          <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                           </a>
                           </picture></td>
                       <td class="celda-acc"><picture>
                           <a href="admin.html">
-                          <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                          <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                           </a>
                           </picture>
                         </td> 
@@ -191,13 +201,13 @@
                     <td class="celda">Pókemon</td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                        <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                         </a>
                         </picture>
                         </td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                        <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                         </a>
                         </picture>
                         </td>
@@ -209,12 +219,12 @@
                     <td class="celda">Harry Potter</td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                        <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                         </a>
                         </picture></div>
                         <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                        <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                         </a>
                         </picture>
                     </td> 
@@ -226,12 +236,12 @@
                     <td class="celda">Harry Potter</td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                        <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                         </a>
                         </picture></td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                        <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                         </a>
                         </picture>
                     </td> 
@@ -243,12 +253,12 @@
                     <td class="celda">Harry Potter</td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                        <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                         </a>
                         </picture></td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                        <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                         </a>
                         </picture>
                     </td>
@@ -260,13 +270,13 @@
                     <td class="celda">Harry Potter</td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/edit_pencil.svg" alt="Editar">
+                        <img class="icon" src="/images/icons/edit_pencil.svg" alt="Editar">
                         </a>
                         </picture>
                     </td>
                     <td class="celda-acc"><picture>
                         <a href="admin.html">
-                        <img src="/images/icons/delete_trash.svg" alt="Eliminar">
+                        <img class="icon" src="/images/icons/delete_trash.svg" alt="Eliminar">
                         </a>
                         </picture>
                     </td> 
@@ -277,20 +287,20 @@
               
         </container>
     </main>
-    <footer>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/pages/shop.html">SHOP</a>
+    <footer class="footer">
+        <nav class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/pages/shop.html">SHOP</a>
                 </li>
-                <li>
-                    <a href="/pages/.contact.html">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/pages/.contact.html">CONTACTO</a>
                 </li>
-                <li>
-                    <a href="/pages/.login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/pages/.login.html">LOGIN</a>
                 </li>
-                <li>
-                    <a href="/pages/.register.html">REGISTRARSE</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/pages/.register.html">REGISTRARSE</a>
                 </li>
             </ul>
             <picture>
@@ -298,9 +308,11 @@
                     <img src="/images/branding/isotype.svg" alt="isotipo">
                 </a>
             </picture>  
-            <p>All rights reserved 2023 - MingoShop &copy;</p>
         </nav>
+        <div>
+            <p class="footer__copy">  All rights reserved 2023 - MingoShop &copy;</p>
+        </div>
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 </body>
 </html>

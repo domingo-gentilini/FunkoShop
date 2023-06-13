@@ -1,5 +1,7 @@
-// let num1 = prompt("Por favor ingresa un número:");
-// let num2 = prompt("Por favor otro número:");
+const express = require(`express`);
+const app = express();
+const PORT = 3001;
 
+app.use(express.static("public"));
 
-// const maxNumber = [num1, num2]
+app.listen (PORT, () => console.log(`server corriendo en puerto ${PORT}`)); /*definir puerto y mostrar mensaje*/
