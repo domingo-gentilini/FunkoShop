@@ -1,0 +1,11 @@
+const path = require ('path'); //unir __dirname con ruta
+
+module.exports = {
+    notFound: (req, res, next) => {
+        
+        res.status(404).sendFile(path.resolve(__dirname, "../../public/pages/404.html"));
+    },
+    serverError: (req, res, next) => {
+        res.status(500).send("el servidor np funciona")
+    },
+};
