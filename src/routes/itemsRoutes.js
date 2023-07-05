@@ -4,7 +4,7 @@ const itemsControllers = require ('../controllers/itemsControllers.js') /*vincul
 
 
 router.get('/items', itemsControllers.getItems);
-router.get('/items/:item', itemsControllers.getItem);
+router.get('/items/:id', itemsControllers.getItem);
 router.post('/items/create', itemsControllers.createItem);
 
 

@@ -1,4 +1,4 @@
-const { serverError } = require ('../utils/errorHandler.js');
+const { serverError } = require ('../utils/errorHandler');
 
 
 module.exports = {

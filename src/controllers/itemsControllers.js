@@ -1,15 +1,19 @@
-const { getAll } = require ('../models/items');
+const { getAll, getOne, getAllItems } = require('../services/itemsServices');
 
-const getItems = async (req, res) => {
-    const items = await getAll();
+const getItems =  (req, res) => { //aca iba async 
+    const items =   getAllItems (); // aca iba await
+
     res.send(items);
 };
 
-const getItem = (req, res) => {
-    res.send("item");
+ function getItem(req, res) {
+    const id = req.params.id;
+    console.log(id);
+    const item =  getOne({id_producto : id});
+    res.send(item);
 };
 
-const createItem = (req, res) => {
+function createItem(req, res) {
     res.send("items");
 };
 

@@ -1,11 +1,12 @@
 /*puede aparecer como db.js o conn.js*/
 const mysql = require ('mysql2');
+require('dotenv').config();
 
 const pool = mysql.createPool ({
-    host: 'localhost',
-    user: 'root',
-    password: 'mysqlroot963.',
-    database: 'funkoshop',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
     port: 3306,
     waitForConnections: true,
     connectionLimit: 10,
@@ -26,5 +27,5 @@ pool.getConnection ((error, connection) => {
 });
 
 module.exports = {
-    conn: pool.promise()
+    connection: pool.promise()
 };

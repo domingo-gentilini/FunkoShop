@@ -9,7 +9,7 @@ const { notFound } = require('./src/utils/errorHandler.js');
 const { auth } = require('./src/middlewares/auth.js')
 
 /*import de rutas*/
-const itemsRoutes = require('./src/routes/itemsRoutes');
+const itemsRoutes = require('./src/routes/itemsRoutes.js');
 const categoriesRoutes = require('./src/routes/categoriesRoutes.js');
 
 /*carpeta de archivo estaticos*/
@@ -23,6 +23,6 @@ app.use('/', categoriesRoutes);
 
 /* manejo de errores*/
 
-app.use(notFound);/*mw de app para las rutas*/
+//app.use(notFound);/*mw de app para las rutas*/
 
-app.listen(PORT,() => console.log(`corriendo en puerto ${PORT}`));
+app.listen(PORT,() => console.log(`----------CORRIENDO EN PUERTO ${PORT}----------`));
