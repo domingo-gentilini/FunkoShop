@@ -8,9 +8,13 @@ const getAll = async () => {
 };
 const getOne = async (params) => {
 
-    const [rows, fields] = await connection.query ('SELECT * FROM producto WHERE ?;', params); //reemplaza ? x params.id
+    const { id } = req.params;
+    res.json({
+        id,
+        //nombre
+    });
 
-    return rows, fields;
+    return getOne;
 };
 module.exports = {
     getAll,

@@ -29,3 +29,13 @@ pool.getConnection ((error, connection) => {
 module.exports = {
     connection: pool.promise()
 };
+
+/*pool.getConnection ((error, connection) => {
+    try {
+        db.authenticate();
+        console.log('database online');
+    } catch(error) {
+        throw new Error(error);
+    }
+    
+});*/
