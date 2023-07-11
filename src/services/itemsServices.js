@@ -4,11 +4,14 @@ const getAllItems = async (params) => {
 
     //logica if else
 
-    const data = getAll(params);
-    return params;
+    const data = await getAll(params);
+    return data;
 
 }
+
+//const getOne:/*verificar aca*/
 
 module.exports = {
-    getAllItems
-}
+    getAllItems,
+    getOne
+};

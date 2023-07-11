@@ -21,7 +21,9 @@ app.use(express.json());
 app.use('/', auth, itemsRoutes); /* busca autenticacion para ir a items*/
 app.use('/', categoriesRoutes); 
 
-/* manejo de errores*/
+/* config del template engines EJS*/
+app.set('view engine', 'ejs');
+app.set('views', './src/views');
 
 //app.use(notFound);/*mw de app para las rutas*/
 

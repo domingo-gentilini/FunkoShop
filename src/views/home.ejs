@@ -1,0 +1,94 @@
+<%-include('partials/header')%>
+
+<section class="hero"> <!--HERO es Banner-->
+    <article class="hero__content container">
+        <h2 class="hero__title">Nuevos Ingresos</h2>
+        <p class="hero__text">Descubri el nuevo FunkoPop de tu colección</p>
+        <a class="hero__link" href="./pages/shop.html">SHOP</a>
+    </article>
+</section>
+<main class="main-container">
+    <section class="collection container row align-items-center">
+        <article class="collection__content col-lg-4 col-sm-6 order-0">
+            <h3 class="collection__title mb-3">Universo Star Wars</h3>
+            <p class="collection__text mb-3">Disfruta de una saga que sigue agregando personajes a su colección.</p>
+            <a class="collection__link button-coleccion py-2 px-5 text-light text-decoration-none rounded-pill d-inline-block" href="./shop.html">VER COLECCIÓN</a>
+        </article>
+        <picture class="collection__cover col-lg-8 col-sm-6 order-1" >
+            <img class="img-fluid" src="../images/star-wars/baby-yoda-1.webp" alt="Colección Star Wars">
+        </picture>
+    </section>
+    <section class="collection container row align-items-center">
+        <article class="collection__content col-lg-4 col-sm-6 order-1">
+            <h3 class="collection__title mb-3">Pókemon</h3>
+            <p class="collection__text mb-3">¿Podrás capturarlos todos?</p>
+            <a class="collection__link button-coleccion py-2 px-5 text-light text-decoration-none rounded-pill d-inline-block" href="./shop.html">VER COLECCIÓN</a>
+            </article>
+        <picture class="collection__cover col-lg-8 col-sm-6 order-0 ">
+            <img class="img-fluid"src="../images/pokemon/vulpix-1.webp" alt="Colección Pókemon">
+        </picture>
+    </section>
+    <section class="collection container row align-items-center">
+        <article class="collection__content col-lg-4 col-sm-6 order-0">
+            <h3 class="collection__title mb-3">Harry Potter</h3>
+            <p class="collection__text mb-3">Revive los recuerdos de una saga llena de magia y encanto.</p>
+            <a class="collection__link button-coleccion py-2 px-5 text-light text-decoration-none rounded-pill d-inline-block" href="./shop.html">VER COLECCIÓN</a>
+        </article>
+        <picture class="collection__cover col-lg-8 col-sm-6 order-1">
+            <img class="img-fluid"src="../images/harry-potter/snape-patronus-1.webp" alt="Colección Harry Potter">
+        </picture>
+    </section>
+    <section class="slider container">
+        <h2 class="slider__title">Últimos Lanzamientos</h2>
+        <ul class="slider__items row container gap-4 justify-content-center">
+        <li class="slider__item card col-3 inline">
+        <article class="card-item">
+                <a class="card-item__link" href="">
+                <picture class="card-item__cover">
+                    <span class="card-item__tag">Nuevo</span>
+                    <img class="card-item__img--front img-fluid" src="../images/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER">
+                    <img class="card-item__img--back img-fluid" src="../images/star-wars/trooper-box.webp" alt="STORMTROOPER LIGHTSABER">
+                </picture>
+                <div class="card-item__content">
+                    <p class="card-item__license">Star Wars</p><!--universo-->
+                    <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4><!--titulo prod-->
+                    <p class="card-item__price">$12.999</p><!--precio-->
+                    <p class="card-item__promo">18 Cuotas sin interés</p>
+                </div>
+        </a></article>
+        </li>
+        <li class="slider__item card col-3 inline">
+            <article class="card-item" >
+                <a class="card-item__link" href="">
+                <picture class="card-item__cover">
+                    <span class="card-item__tag">Nuevo</span>
+                    <img class="card-item__img--front img-fluid" src="../images/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO">
+                    <img class="card-item__img--back img-fluid" src="../images/pokemon/pidgeotto-box.webp" alt="PIDGEOTTO">
+                </picture>
+                <div class="card-item__content">
+                    <p class="card-item__license">Pókemon</p><!--universo-->
+                    <h4 class="card-item__name">PIDGEOTTO</h4><!--titulo prod-->
+                    <p class="card-item__price">$12.999</p><!--precio-->
+                    <p class="card-item__promo">18 Cuotas sin interés</p>
+                </div>
+            </a></article>
+        </li>
+        <li class="slider__item card col-3 inline">
+            <article class="card-item" >
+                <a class="card-item__link" href="">
+                <picture class="card-item__cover">
+                    <span class="card-item__tag">Nuevo</span>
+                    <img class="card-item__img--front img-fluid" src="../images/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK">
+                    <img class="card-item__img--back img-fluid" src="../images/harry-potter/luna-box.webp" alt="LUNA LOVEGOOD LION MASK">
+                </picture>
+                <div class="card-item__content">
+                    <p class="card-item__license">Harry Potter</p><!--universo-->
+                    <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4><!--titulo prod-->
+                    <p class="card-item__price">$12.999</p><!--precio-->
+                    <p class="card-item__promo">18 Cuotas sin interés</p>
+                </div>
+            </a></article>
+        </li>
+        </ul>
+    </section>
+</main>
