@@ -1,3 +1,5 @@
+* [Get an User] : `GET /api/me`
+
 # Appartamentos NC API Documentation
 
 This project is part of No Country emulation process ...
