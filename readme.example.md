@@ -33,7 +33,7 @@ Used to collect a Token for a registered User.
 
 **Method** : `POST`
 
-**Auth required** : YES
+**Auth required** : NO
 
 **Data constraints**
 
@@ -48,8 +48,8 @@ Used to collect a Token for a registered User.
 
 ```json
 {
-    "username": "iloveauth@example.com",
-    "password": "abcd1234"
+    "username": "mail@example.com",
+    "password": "Abc*d1234"
 }
 ```
 
@@ -81,13 +81,13 @@ Used to collect a Token for a registered User.
 }
 ```
 
-* [Register](login.md) : `POST api/v1/auth/register`
+* [Register](login.md) : `POST api/create`
 
 # Register
 
 Used to register a new user.
 
-**URL** : `/api/v1/auth/register`
+**URL** : `/api/create`
 
 **Method** : `POST`
 
@@ -111,9 +111,9 @@ Used to register a new user.
 {
 	"name": "Abelardo",
 	"lastName": "Martinez",
-	"email": "amartinez@gmail.com",
+	"email": "mail@example.com",
 	"dateOfBirth": "1992/08/21",
-	"password": "123456"
+	"password": "Abc*d1234"
 }
 ```
 
@@ -132,7 +132,7 @@ Used to register a new user.
 		"user"
 	],
 	"status": "active",
-	"isBarber": false,
+	"isBarber": false,   /*preguntar este item*/
 	"_id": "6438cb33d072af368825960e",
 	"createdAt": "2023-04-14T03:40:35.226Z",
 	"updatedAt": "2023-04-14T03:40:35.226Z"
