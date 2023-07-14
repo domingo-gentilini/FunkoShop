@@ -38,7 +38,7 @@ Used to collect a Token for a registered User.
 **Data constraints**
 
 ```json
-{
+{	
     "email": "[valid email address]",
     "password": "[password in plain text]"
 }
@@ -100,7 +100,6 @@ Used to register a new user.
 	"name": "[valid name]",
 	"lastName": "[valid lastname]",
 	"email": "[valid email address]",
-	"dateOfBirth": "[valid date]",
 	"password": "[valid plain text password]"
 }
 ```
@@ -112,7 +111,6 @@ Used to register a new user.
 	"name": "Abelardo",
 	"lastName": "Martinez",
 	"email": "mail@example.com",
-	"dateOfBirth": "1992/08/21",
 	"password": "Abc*d1234"
 }
 ```
@@ -128,11 +126,8 @@ Used to register a new user.
 	"name": "Abelardo",
 	"lastName": "Martinez",
 	"email": "amartinez@gmail.com",
-	"role": [
-		"user"
-	],
-	"status": "active",
-	"_id": "6438cb33d072af368825960e",
+	"is_active": "active",
+	"id": "6438cb33d072af368825960e",
 	"createdAt": "2023-04-14T03:40:35.226Z",
 	"updatedAt": "2023-04-14T03:40:35.226Z"
 }
@@ -192,17 +187,14 @@ subscription information.
 
 ```json
 {
-	"_id": "643273b3a5ae2815da879f25",
+	"id": "643273b3a5ae2815da879f25",
 	"name": "Pedro",
 	"lastName": "Porro",
 	"email": "pporro12@gmail.com",
 	"password": "$2b$10$fxMnMneNfj2dfcFzryXU..jMKVGIIAmPsfZqN6GnIetUQZlO7E3xq",
 	"homeAddress": "Lancaster 652",
 	"age": 39,
-	"role": [
-		"admin"
-	],
-	"status": "active",
+	"is_active": "active",
 	"createdAt": "2023-04-09T08:13:39.195Z",
 	"updatedAt": "2023-04-09T08:13:39.195Z"
 }
@@ -232,20 +224,16 @@ subscription information.
 ```json
 {
 	"result": {
-		"_id": "64327380a5ae2815da879f22",
+		"id": "64327380a5ae2815da879f22",
 		"name": "Pedro",
 		"lastName": "Porro",
 		"email": "miemail@gmail.com",
 		"password": "123456",
 		"homeAddress": "Lancaster 652",
 		"age": 48,
-		"role": [
-			"user"
-		],
-		"status": "active",
+		"is_active": "active",
 		"createdAt": "2023-04-09T08:12:48.496Z",
 		"updatedAt": "2023-04-09T16:56:01.426Z",
-		"dateOfBirth": "1999/09/19"
 	}
 }
 ```
@@ -275,63 +263,50 @@ Get the list of users .
 ```json
 
 	{
-		"_id": "64327380a5ae2815da879f22",
+		"id": "64327380a5ae2815da879f22",
 		"name": "Pedro",
 		"lastName": "Porro",
 		"email": "miemail@gmail.com",
 		"password": "123456",
 		"homeAddress": "Lancaster 652",
 		"age": 48,
-		"role": [
-			"user"
-		],
-		"status": "active",
+		"is_active": "active",
 		"createdAt": "2023-04-09T08:12:48.496Z",
 		"updatedAt": "2023-04-09T16:56:01.426Z",
-		"dateOfBirth": "1999/09/19"
 	},
 	{
-		"_id": "643273b3a5ae2815da879f25",
+		"id": "643273b3a5ae2815da879f25",
 		"name": "Pedro",
 		"lastName": "Porro",
 		"email": "pporro12@gmail.com",
 		"password": "$2b$10$fxMnMneNfj2dfcFzryXU..jMKVGIIAmPsfZqN6GnIetUQZlO7E3xq",
 		"homeAddress": "Lancaster 652",
 		"age": 39,
-		"role": [
-			"admin"
-		],
-		"status": "active",
+		"is_active": "active",
 		"createdAt": "2023-04-09T08:13:39.195Z",
 		"updatedAt": "2023-04-09T08:13:39.195Z"
 	},
 	{
-		"_id": "6432f2e57394e81b51fe8033",
+		"id": "6432f2e57394e81b51fe8033",
 		"name": "Paul",
 		"lastName": "Godrick",
 		"email": "pgodrick@gmail.com",
 		"password": "$2b$10$BBYD0N.6fC6IFNQcKkwnj.wHB4rRiUkifLuDcFNnqq2bcq0o04Ktu",
 		"homeAddress": "Chesterfueld 122",
 		"age": 26,
-		"role": [
-			"user"
-		],
-		"status": "active",
+		"is_active": "active",
 		"createdAt": "2023-04-09T17:16:21.917Z",
 		"updatedAt": "2023-04-09T17:16:21.917Z"
 	},
 	{
-		"_id": "6432f3637394e81b51fe8036",
+		"id": "6432f3637394e81b51fe8036",
 		"name": "Victor",
 		"lastName": "Esparza",
 		"email": "vesparza@gmail.com",
 		"password": "$2b$10$SQ.LmsihSpgX4tbMPLZyPeMM74I9JYGY3zXlDBRd3nQfS4QNMLEEm",
 		"homeAddress": "Neterfield 989",
 		"age": 24,
-		"role": [
-			"user"
-		],
-		"status": "active",
+		"is_active": "active",
 		"createdAt": "2023-04-09T17:18:27.241Z",
 		"updatedAt": "2023-04-09T17:18:27.241Z"
 	}
@@ -360,7 +335,6 @@ Allow the Authenticated User to update their details.
 {
 	"name": "Pedro",
 	"lastName": "Porro",
-	"dateOfBirth": "1999/09/19",
 	"password": "123456"
 }
 ```
@@ -387,20 +361,16 @@ Partial data is allowed.
 
 ```json
 {
-	"_id": "64327380a5ae2815da879f22",
+	"id": "64327380a5ae2815da879f22",
 	"name": "Pedro",
 	"lastName": "Porro",
 	"email": "miemail@gmail.com",
 	"password": "123456",
 	"homeAddress": "Lancaster 652",
 	"age": 48,
-	"role": [
-		"user"
-	],
-	"status": "active",
+	"is_active": "active",
 	"createdAt": "2023-04-09T08:12:48.496Z",
 	"updatedAt": "2023-04-09T16:56:01.426Z",
-	"dateOfBirth": "1999/09/19"
 }
 ```
 
@@ -464,20 +434,19 @@ Allow the Authenticated User to delete their details and information.
     "Ocurrió un error al eliminar la cuenta."
 }
 ``` 
-//hasta aca  <-----
 
 ### Properties
 
 Endpoints for viewing and manipulating properties that the Authenticated User
 has permissions to access.
 
-* [List Products] : `GET /api/products/`
+* [List Properties] : `GET /api/properties/list`
 
 # List properties
 
 Get the list of properties .
 
-**URL** : `/api/v1/products/`
+**URL** : `/api/properties/list`
 
 **Method** : `GET`
 
@@ -497,56 +466,112 @@ Get the list of properties .
 
 [
 	{
-		"_id": "6432f0de3413339193948ee8",
+		"id": "0303456789963",
 		"name": "Casa en venta 3hab San Fernando",
-		"description": "SHAMPOO ARTESANAL PARA BARBA BLACK EL TURCO",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
 		"price": 40,
-		"__v": 0
 	},
 	{
-		"_id": "6432f0fb3413339193948eea",
-		"name": "Beard Oil GROWTH - El Turco",
-		"description": "ACEITE PARA BARBA GROWTH EL TURCO",
+		"id": "0303456789963",
+		"name": "Dpto en alquiler 1hab Palermo",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
 		"price": 95,
-		"__v": 0
 	},
 	{
-		"_id": "6432f13b3413339193948eec",
-		"name": "BEARD SHIELD – Protector de Barba",
-		"description": "Diseñado para no maltratar la barba como las mascarillas normales",
+		"id": "0303456789963",
+		"name": "Monoambiente alq Pehuajó",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
 		"price": 49,
-		"__v": 0
 	}
 ]
 ```
+* [List Properties] : `GET /api/properties/list-available`
 
-* [Create a Product](accounts/post.md) : `POST /api/v1/products/`
+# List properties
 
-Used to register a new product to offer.
+Get the list of properties .
 
-**URL** : `/api/v1/products/`
+**URL** : `/api/properties/list-available`
+
+**Method** : `GET`
+
+**Auth required** : YES
+
+**Header** : x-access-token
+
+**Permissions required** : None
+
+## Success Response
+
+**Code** : `200 OK`
+
+**Content examples**
+
+```json
+
+[
+	{
+		"id": "0303456789963",
+		"name": "Casa en venta 3hab San Fernando",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
+		"price": 40,
+		"available": "[available]"
+	},
+	{
+		"id": "0303456789963",
+		"name": "Dpto en alquiler 1hab Palermo",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
+		"price": 95,
+		"available": "[available]"
+	},
+	{
+		"id": "0303456789963",
+		"name": "Monoambiente alq Pehuajó",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
+		"price": 49,
+		"available": "[available]"
+	}
+]
+``` 
+
+* [Create a Property]: `POST /api/properties/create`
+
+Used to register a new property to offer.
+
+**URL** : `/api/properties/create`
 
 **Method** : `POST`
 
-**Auth required** : NO
+**Auth required** : YES
 
 **Data constraints**
 
 ```json
-{
+{	
+	"id": "[id]",
 	"name": "[valid name]",
-	"description": "[valid text plain description of a product]",
-	"price": "[valid price amount that includes decimals]"
-}
+	"description": "[valid text plain description of the property]",
+	"address": "[valid text plain address of the property]",
+	"province": "[valid text plain province of the property]",
+	"country": "[valid text plain country of the property]",
+	"price": "[valid price amount that includes decimals]",
+	"available": "[valid text plain if the property is available]"
+	}
 ```
 
 **Data example**
 
 ```json
 {
-	"name": "BEARD SHIELD – Protector de Barba",
-	"description": "Diseñado para no maltratar la barba como las mascarillas normales",
-	"price": 49
+	"id": "6432f13b3413339193948eec",
+	"name": "[Monoambiente alq Pehuajó]",
+	"description": "[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.]",
+	"address": "[123 Fake street]",
+	"province": "[Montana]",
+	"country": "[Argentina]",
+	"price": "[150000]",
+	"available": "[available]"
+	
 }
 ```
 
@@ -558,17 +583,16 @@ Used to register a new product to offer.
 
 ```json
 {
-	"name": "BEARD SHIELD – Protector de Barba",
-	"description": "Diseñado para no maltratar la barba como las mascarillas normales",
-	"price": 49,
-	"_id": "6432f13b3413339193948eec",
-	"__v": 0
+	"name": "[Monoambiente alq Pehuajó]",
+	"address": "[123 Fake street]",
+	"province": "[Montana]",
+	"price": "[150000]",
 }
 ```
 
 ## Error Response
 
-**Condition** : If 'username' and 'password' combination is wrong.
+**Condition** : Si un campo de las detalles no cumple con los requisitos.
 
 **Code** : `400 BAD REQUEST`
 
@@ -577,18 +601,17 @@ Used to register a new product to offer.
 ```json
 {
     "non_field_errors": [
-        "Unable to login with provided credentials."
+        "Verificar que todos los campos esten cargados correctamente."
     ]
 }
 ```
-* [Get an Product](user/get.md) : `GET /api/v1/products/:id`
+* [Get a Property] : `GET /api/properties/find/:id`
 
-# Show a product
+# Show a Property
 
-Get the details of the currently Authenticated User along with basic
-subscription information.
+Trae la ficha de la propiedad seleccionada
 
-**URL** : `/api/v1/products/:id`
+**URL** : `/api/properties/find/:id`
 
 **Method** : `GET`
 
@@ -605,11 +628,14 @@ subscription information.
 ```json
 {
 	"result": {
-		"_id": "6432f0fb3413339193948eea",
-		"name": "Beard Shampoo Regular EL TURCO",
-		"description": "SHAMPOO ARTESANAL PARA BARBA REGULAR EL TURCO",
-		"price": 40,
-		"__v": 0
+		"id": "03034567899",
+		"name": "Monoambiente alq Palermo pesos",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
+		"address": "123 fake street",
+		"province": "MOntana",
+		"country": "Argentina",
+		"price": 125000,
+		"available": "[Disponible]"
 	}
 }
 ```
@@ -621,238 +647,16 @@ subscription information.
 * Similar to the `GET` endpoint for the User, if the User does not have a
   UserInfo instance, then one will be created for them.
 
-* [Update a Product](accounts/pk/put.md) : `PATCH /api/v1/products/:id`
+* [Update a Property] : `POST /api/properties/update/:id`
 
-# Update Product Info
+# Update Property
 
-Allow the Authenticated User as admin to update product info.
+Allow the Authenticated User as admin to update property info.
 
-**URL** : `/api/v1/users/:id`
-
-**Method** : `PATCH`
-
-**Auth required** : YES
-
-**Header**: x-access-token
-
-**Permissions required** : None
-
-**Data constraints**
-
-```json
-{
-	"name": "Beard Oil GROWTH - El Turco",
-	"description": "ACEITE PARA BARBA GROWTH EL TURCO",
-	"price": 95
-}
-```
-
-**Data examples**
-
-Partial data is allowed.
-
-```json
-{
-	"price": 95
-}
-```
-
-## Success Responses
-
-**Condition** : Data provided is valid and User is Authenticated.
-
-**Code** : `200 OK`
-
-**Content example** :
-
-```json
-{
-	"_id": "6432f0fb3413339193948eea",
-	"name": "Beard Oil GROWTH - El Turco",
-	"description": "ACEITE PARA BARBA GROWTH EL TURCO",
-	"price": 95,
-	"__v": 0
-}
-```
-
-## Error Response
-
-**Condition** : If provided data is invalid, e.g. a name field is too long.
-
-**Code** : `400 BAD REQUEST`
-
-**Content example** :
-
-```json
-{
-    "first_name": [
-        "Please provide maximum 30 character or empty string",
-    ]
-}
-```
-
-* [Delete a Product](accounts/pk/delete.md) : `DELETE /api/v1/products/:id`
-
-
-
-### Services
-
-Endpoints for viewing and manipulating the services which store can offer, user must be Authenticated has permissions to access.
-
-* [List Services](accounts/get.md) : `GET /api/services/`
-
-# List services
-
-Get the list of users .
-
-**URL** : `/api/v1/services/`
-
-**Method** : `GET`
-
-**Auth required** : YES
-
-**Header** : x-access-token
-
-**Permissions required** : None
-
-## Success Response
-
-**Code** : `200 OK`
-
-**Content examples**
-
-```json
-
-[
-	{
-		"_id": "6432f1db3413339193948ef1",
-		"name": "Arreglo de Barba",
-		"price": 50,
-		"description": "Arreglo de barba, corte y perfilado, toalla caliente y aplicacion de aceites y ceras para la barba",
-		"__v": 0
-	},
-	{
-		"_id": "6432f25b7394e81b51fe802d",
-		"name": "Corte de Cabello",
-		"price": 60,
-		"description": "Corte de cabello a tijera y maquinas, lavado de cabello y aplicacion de productos",
-		"__v": 0
-	},
-	{
-		"_id": "6432f2737394e81b51fe802f",
-		"name": "Corte de Cabello y Arreglo de Barba",
-		"price": 90,
-		"description": "Corte de cabello corte a tijera y maquinas, lavado de cabeza y aplicacion de productos / arreglo de barba , corte, perfilado toalla",
-		"__v": 0
-	}
-]
-```
-
-* [Create a Service](accounts/post.md) : `POST /api/v1/services/`
-
-Used to register a new product to offer.
-
-**URL** : `/api/v1/services/`
+**URL** : `/api/properties/update/:id`
 
 **Method** : `POST`
 
-**Auth required** : NO
-
-**Data constraints**
-
-```json
-{
-	"name": "[valid name]",
-	"price": "[valid price amount that includes decimals]",
-    "description": "[valid text plain description of a service]",
-}
-```
-
-**Data example**
-
-```json
-{
-	"name": "Corte de Cabello y Arreglo de Barba",
-	"price": 90,
-	"description": "Corte de cabello corte a tijera y maquinas, lavado de cabeza y aplicacion de productos / arreglo de barba , corte, perfilado toalla"
-}
-```
-
-## Success Response
-
-**Code** : `200 OK`
-
-**Content example**
-
-```json
-{
-	"name": "Corte de Cabello y Arreglo de Barba",
-	"price": 90,
-	"description": "Corte de cabello corte a tijera y maquinas, lavado de cabeza y aplicacion de productos / arreglo de barba , corte, perfilado toalla",
-	"_id": "6432f2737394e81b51fe802f",
-	"__v": 0
-}
-```
-
-## Error Response
-
-**Condition** : If 'username' and 'password' combination is wrong.
-
-**Code** : `400 BAD REQUEST`
-
-**Content** :
-
-```json
-{
-    "non_field_errors": [
-        "Unable to login with provided credentials."
-    ]
-}
-```
-
-* [Get a Service](user/get.md) : `GET /api/v1/services/:id`
-
-# Show a service
-
-Get the details of a service
-
-**URL** : `/api/v1/services/:id`
-
-**Method** : `GET`
-
-**Auth required** : YES
-
-**Permissions required** : None
-
-## Success Response
-
-**Code** : `200 OK`
-
-**Content examples**
-
-```json
-{
-	"result": {
-		"_id": "6432f2737394e81b51fe802f",
-		"name": "Corte de Cabello y Arreglo de Barba",
-		"price": 90,
-		"description": "Corte de cabello corte a tijera y maquinas, lavado de cabeza y aplicacion de productos / arreglo de barba , corte, perfilado toalla",
-		"__v": 0
-	}
-}
-```
-
-* [Update a Service](accounts/pk/put.md) : `PATCH /api/v1/services/:id`
-
-
-# Update service info
-
-Allow the Authenticated User as admin to update product info.
-
-**URL** : `/api/v1/services/:id`
-
-**Method** : `PATCH`
-
 **Auth required** : YES
 
 **Header**: x-access-token
@@ -863,9 +667,14 @@ Allow the Authenticated User as admin to update product info.
 
 ```json
 {
-	"name": "Corte de Cabello y Arreglo de Barba",
-	"price": 115,
-	"description": "Corte de cabello corte a tijera y maquinas, lavado de cabeza y aplicacion de productos / arreglo de barba , corte, perfilado toalla"
+	"id": "0303456789963",
+	"name": "Monoambiente alq Pehuajó",
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
+	"address": "123 fake street",
+	"province": "MOntana",
+	"country": "Argentina",
+	"price": 185000,
+	"available": "[Disponible]"
 }
 ```
 
@@ -875,7 +684,7 @@ Partial data is allowed.
 
 ```json
 {
-	"price": 135,
+	"price": 180000
 }
 ```
 
@@ -889,17 +698,20 @@ Partial data is allowed.
 
 ```json
 {
-	"_id": "6432f2737394e81b51fe802f",
-	"name": "Corte de Cabello y Arreglo de Barba",
-	"price": 121,
-	"description": "Corte de cabello corte a tijera y maquinas, lavado de cabeza y aplicacion de productos / arreglo de barba , corte, perfilado toalla",
-	"__v": 0
+	"id": "0303456789963",
+	"name": "Monoambiente alq Pehuajó",
+	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
+	"address": "123 fake street",
+	"province": "MOntana",
+	"country": "Argentina",
+	"price": 185000,
+	"available": "[Disponible]"
 }
 ```
 
 ## Error Response
 
-**Condition** : If provided data is invalid, e.g. a name field is too long.
+**Condition** : If provided data is invalid, or a name field is too long.
 
 **Code** : `400 BAD REQUEST`
 
@@ -908,219 +720,24 @@ Partial data is allowed.
 ```json
 {
     "first_name": [
-        "Please provide maximum 30 character or empty string",
+        "Verifique los datos ingresados.",
     ]
 }
 ```
 
+* [Delete a Property]: `DELETE /api/properties/`
 
-* [Delete a Service](accounts/pk/delete.md) : `DELETE /api/v1/services/:id`
+**URL** : `/api/properties/:id`
 
-### Bookings
-
-Endpoints for viewing and manipulating the bookings that the Authenticated User
-has permissions to access.
-
-* [List Bookings](accounts/get.md) : `GET /api/bookings/`
-
-# List Bookings
-
-Get the list of users .
-
-**URL** : `/api/v1/bookings/`
-
-**Method** : `GET`
-
-**Auth required** : YES
-
-**Header** : x-access-token
-
-**Permissions required** : None
-
-## Success Response
-
-**Code** : `200 OK`
-
-**Content examples**
-
-```json
-
-[
-	{
-		"_id": "6438cd9fd072af3688259614",
-		"user": "643273b3a5ae2815da879f25",
-		"date": "2023-04-12T16:00:00.000Z",
-		"service": "6432f2737394e81b51fe802f",
-		"product": "6432f0fb3413339193948eea",
-		"__v": 0
-	},
-	{
-		"_id": "6438ce34d072af3688259617",
-		"user": "64327380a5ae2815da879f22",
-		"date": "2023-04-12T16:00:00.000Z",
-		"service": "6432f2737394e81b51fe802f",
-		"product": "6432f0fb3413339193948eea",
-		"__v": 0
-	},
-	{
-		"_id": "6438d00fd072af368825961a",
-		"user": "64327380a5ae2815da879f22",
-		"date": "2023-04-12T16:00:00.000Z",
-		"service": "6432f25b7394e81b51fe802d",
-		"product": "6432f0de3413339193948ee8",
-		"__v": 0
-	}
-]
-```
-
-* [Create a Booking](accounts/post.md) : `POST /api/v1/bookings/`
-
-Used to register a booking.
-
-**URL** : `/api/v1/bookings/`
-
-**Method** : `POST`
-
-**Auth required** : `YES`
-
-**Data constraints**
-
-```json
-{
-	"user": "[valid client id]",
-"date": "[valid date]",
-	"service": "[valid service id]",
-	"product": "[valid product id]"
-}
-```
-
-**Data example**
-
-```json
-{
-	"user": "64327380a5ae2815da879f22",
-"date": "2023-04-23T16:00:00.000+00:00",
-	"service": "6432f25b7394e81b51fe802d",
-	"product": "6432f0de3413339193948ee8"
-}
-```
-
-## Success Response
-
-**Code** : `200 OK`
-
-**Content example**
-
-```json
-{
-	"user": "64327380a5ae2815da879f22",
-"date": "2023-04-23T16:00:00.000Z",
-	"service": "6432f25b7394e81b51fe802d",
-	"product": "6432f0de3413339193948ee8",
-	"_id": "643b902e8ed9a25ac3f32d9b",
-	"__v": 0
-}
-```
-
-## Error Response
-
-**Condition** : If 'username' and 'password' combination is wrong.
-
-**Code** : `400 BAD REQUEST`
-
-**Content** :
-
-```json
-{
-    "non_field_errors": [
-        "Unable to login with provided credentials."
-    ]
-}
-```
-
-* [Show a Booking Detail](accounts/pk/get.md) : `GET /api/v1/bookings/:id`
-
-# Show a booking detail
-
-Get the details of a service
-
-**URL** : `/api/v1/booking/:id`
-
-**Method** : `GET`
-
-**Auth required** : YES
-
-**Permissions required** : None
-
-## Success Response
-
-**Code** : `200 OK`
-
-**Content examples**
-
-```json
-{
-	"result": {
-		"_id": "6432fe4d66f89333648b13b8",
-		"user": "643273b3a5ae2815da879f25",
-		"date": "2023-04-12T16:00:00.000Z",
-		"service": {
-			"_id": "6432f2737394e81b51fe802f",
-			"name": "Corte de Cabello y Arreglo de Barba",
-			"price": 90,
-			"description": "Corte de cabello corte a tijera y maquinas, lavado de cabeza y aplicacion de productos / arreglo de barba , corte, perfilado toalla",
-			"__v": 0
-		},
-		"product": {
-			"_id": "6432f0fb3413339193948eea",
-			"name": "Beard Oil GROWTH - El Turco",
-			"description": "ACEITE PARA BARBA GROWTH EL TURCO",
-			"price": 95,
-			"__v": 0
-		},
-		"__v": 0
-	}
-}
-```
-
-* [Update a Booking](accounts/pk/put.md) : `PATCH /api/v1/bookings/:id`
-
-Allow the Authenticated User as admin to update booking info.
-
-**URL** : `/api/v1/services/:id`
-
-**Method** : `PATCH`
+**Method** : `DELETE`
 
 **Auth required** : YES
 
 **Header**: x-access-token
 
-**Permissions required** : YES
-
-**Data constraints**
-
-```json
-{
-	"user": "[valid client id]",
-	"date": "[valid date]",
-	"service": "[valid service id]",
-	"product": "[valid product id]"
-}
-```
-
-**Data examples**
-
-Partial data is allowed.
-
-```json
-{
-	"date": "2023/04/15",
-}
-```
+**Permissions required** : None
 
 ## Success Responses
-
-**Condition** : Data provided is valid and User is Authenticated.
 
 **Code** : `200 OK`
 
@@ -1128,18 +745,11 @@ Partial data is allowed.
 
 ```json
 {
-	"_id": "6438d00fd072af368825961a",
-	"user": "64327380a5ae2815da879f22",
-	"date": "2023-08-12T16:00:00.000Z",
-	"service": "6432f25b7394e81b51fe802d",
-	"product": "6432f0de3413339193948ee8",
-	"__v": 0
+"La propiedad ha sido eliminada."
 }
 ```
 
 ## Error Response
-
-**Condition** : If provided data is invalid, e.g. a name field is too long.
 
 **Code** : `400 BAD REQUEST`
 
@@ -1147,12 +757,7 @@ Partial data is allowed.
 
 ```json
 {
-    "first_name": [
-        "Please provide maximum 30 character or empty string",
-    ]
+    "Ocurrió un error al eliminar la propiedad."
 }
-```
-
-* [Delete a Booking](accounts/pk/delete.md) : `DELETE /api/v1/bookings/:id`
-
-# ----------------------------------------------------------------------------------------
+``` 
+										//hasta acá seria lo nuestro <------
