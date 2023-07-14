@@ -185,42 +185,6 @@ subscription information.
 
 * [Get an User] : `GET /api/me`
 
-# Show Current User Info
-
-Get the details of the currently Authenticated User along with basic
-subscription information.
-
-**URL** : `/api/me`
-
-**Metodo** : `GET`
-
-**Requiere Autenticación** : YES
-
-**Permissions required** : None
-
-## Response Exitosa
-
-**Code** : `200 OK`
-
-**Content examples**
-
-```json
-{
-	"result": {
-		"id": "64327380a5ae2815da879f22",
-		"name": "Pedro",
-		"lastName": "Porro",
-		"email": "miemail@gmail.com",
-		"password": "CONtraseñña18122022!!",
-		"homeAddress": "Lancaster 652",
-		"age": 48,
-		"is_active": "true",
-		"createdAt": "2023-04-09T08:12:48.496Z",
-		"updatedAt": "2023-04-09T16:56:01.426Z",
-	}
-}	
-```
-
 * [List all Users] : `GET /api/users/list`
 
 # List users
@@ -629,13 +593,40 @@ Trae la ficha de la propiedad seleccionada
 
 **Code** : `200 OK`
 
+**Restricciones de Datos**
+
+```json
+{	
+	"id": "[integer]",
+	"name": "[string]",
+	"description": "[text]",
+	"images":"string url",
+	"address": "[string, valid text plain address of the property]",
+	"province": "[string, valid text plain province of the property]",
+	"country": "[string, valid text plain country of the property]",
+	"price": "[float, valid price amount that includes decimals]",
+	"available": "[boolean]",
+	"total_area":"string",
+	"bedrooms":"integer",
+	"bathrooms":"integer",
+	"garage":"integer",
+	"swimming_pool":"integer",
+	"balocny":"integer",
+	"elevator":"integer",
+	"antiquity":"STRING",
+	"property_id":"integer",
+	"created_at": "date",
+	"updated_at": "date",
+	}
+```
+
 **Ejemplos de contenido**
 
 ```json
 {
 	"result": {
 		"id": "03034567899",
-		"property_id":"",
+		"property_id":"123123456",
 		"name": "Monoambiente alq Palermo pesos",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
 		"address": "123 fake street",
@@ -682,7 +673,7 @@ Allow the Authenticated User as admin to update property info.
 
 **Ejemplos de datos**
 
-Partial data is allowed.
+Puede modificar un solo valor
 
 ```json
 {
@@ -761,4 +752,4 @@ Partial data is allowed.
 {
     "Ocurrió un error al eliminar la propiedad."
 }
-```
+``` 
