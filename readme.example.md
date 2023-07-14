@@ -53,7 +53,7 @@ Used to collect a Token for a registered User.
 }
 ```
 
-## Success Response
+### Success Response
 
 **Code** : `200 OK`
 
