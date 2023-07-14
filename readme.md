@@ -1,50 +1,33 @@
 # Appartamentos NC API Documentation
 
-This project is part of No Country emulation process ...
+Este proyecto es parte de una emulacion No Country...
 
-1. Navigate to the directory where the repository was downloaded
-``` bash
-cd api
-```
-2. Install the required dependencies
-``` bash
-npm install
-```
-3. Configure API
+# Autenticación
 
-	i. Locate the file named `.env.example` in the main /api folder.
-
-	ii. Create a copy of this file, called `.env` by removing the `example` extension.
-
-	iii. Open the `.env` file in a text editor.
-
-
-# Authentication
-
-Open endpoints require no Authentication.
+Los endpoints no requieren autenticación
 
 * [Login]: `POST /api/login`
 
 # Login
 
-Used to collect a Token for a registered User.
+Recopilamos un Token para un usuario registrado.
 
 **URL** : `/api/login`
 
-**Method** : `POST`
+**Metodo** : `POST`
 
-**Auth required** : NO
+**Requiere Autenticación** : NO
 
-**Data constraints**
+**Restricciones de Datos**
 
 ```json
 {	
-    "email": "[valid email address]",
-    "password": "[password in plain text]"
+    "email": "[string formato email]",
+    "password": "[string formato password]"
 }
 ```
 
-**Data example**
+**Ejemplos de datos**
 
 ```json
 {
@@ -53,7 +36,7 @@ Used to collect a Token for a registered User.
 }
 ```
 
-### Success Response
+## Response Exitosa
 
 **Code** : `200 OK`
 
@@ -89,22 +72,22 @@ Used to register a new user.
 
 **URL** : `/api/create`
 
-**Method** : `POST`
+**Metodo** : `POST`
 
-**Auth required** : NO
+**Requiere Autenticación** : NO
 
-**Data constraints**
+**Restricciones de Datos**
 
 ```json
 {
-	"name": "[valid name]",
-	"lastName": "[valid lastname]",
-	"email": "[valid email address]",
-	"password": "[valid plain text password]"
+	"name": "[string]",
+	"lastName": "[string]",
+	"email": "[string]",
+	"password": "[string]"
 }
 ```
 
-**Data example**
+**Ejemplos de datos**
 
 ```json
 {
@@ -115,7 +98,7 @@ Used to register a new user.
 }
 ```
 
-## Success Response
+## Response Exitosa
 
 **Code** : `200 OK`
 
@@ -126,7 +109,7 @@ Used to register a new user.
 	"name": "Abelardo",
 	"lastName": "Martinez",
 	"email": "amartinez@gmail.com",
-	"is_active": "active",
+	"is_active": "true",
 	"id": "6438cb33d072af368825960e",
 	"createdAt": "2023-04-14T03:40:35.226Z",
 	"updatedAt": "2023-04-14T03:40:35.226Z"
@@ -171,15 +154,15 @@ subscription information.
 
 **URL** : `/api/me`
 
-**Method** : `GET`
+**Metodo** : `GET`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
 **Header** : x-access-token
 
 **Permissions required** : None
 
-## Success Response
+## Response Exitosa
 
 **Code** : `200 OK`
 
@@ -191,10 +174,10 @@ subscription information.
 	"name": "Pedro",
 	"lastName": "Porro",
 	"email": "pporro12@gmail.com",
-	"password": "$2b$10$fxMnMneNfj2dfcFzryXU..jMKVGIIAmPsfZqN6GnIetUQZlO7E3xq",
+	"password": "CONtraseñña18122022!!",
 	"homeAddress": "Lancaster 652",
 	"age": 39,
-	"is_active": "active",
+	"is_active": "true",
 	"createdAt": "2023-04-09T08:13:39.195Z",
 	"updatedAt": "2023-04-09T08:13:39.195Z"
 }
@@ -209,13 +192,13 @@ subscription information.
 
 **URL** : `/api/me`
 
-**Method** : `GET`
+**Metodo** : `GET`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
 **Permissions required** : None
 
-## Success Response
+## Response Exitosa
 
 **Code** : `200 OK`
 
@@ -228,14 +211,14 @@ subscription information.
 		"name": "Pedro",
 		"lastName": "Porro",
 		"email": "miemail@gmail.com",
-		"password": "123456",
+		"password": "CONtraseñña18122022!!",
 		"homeAddress": "Lancaster 652",
 		"age": 48,
-		"is_active": "active",
+		"is_active": "true",
 		"createdAt": "2023-04-09T08:12:48.496Z",
 		"updatedAt": "2023-04-09T16:56:01.426Z",
 	}
-}
+}	
 ```
 
 * [List all Users] : `GET /api/users/list`
@@ -246,28 +229,29 @@ Get the list of users .
 
 **URL** : `/api/users/list/`
 
-**Method** : `GET`
+**Metodo** : `GET`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
 **Header** : x-access-token
 
 **Permissions required** : None
 
-## Success Response
+## Response Exitosa
 
 **Code** : `200 OK`
 
 **Content examples**
 
 ```json
+[
 
 	{
 		"id": "64327380a5ae2815da879f22",
 		"name": "Pedro",
 		"lastName": "Porro",
 		"email": "miemail@gmail.com",
-		"password": "123456",
+		"password": "CONtraseñña18122022!!",
 		"homeAddress": "Lancaster 652",
 		"age": 48,
 		"is_active": "active",
@@ -279,10 +263,10 @@ Get the list of users .
 		"name": "Pedro",
 		"lastName": "Porro",
 		"email": "pporro12@gmail.com",
-		"password": "$2b$10$fxMnMneNfj2dfcFzryXU..jMKVGIIAmPsfZqN6GnIetUQZlO7E3xq",
+		"password": "CONtraseñña18122022!!",
 		"homeAddress": "Lancaster 652",
 		"age": 39,
-		"is_active": "active",
+		"is_active": "true",
 		"createdAt": "2023-04-09T08:13:39.195Z",
 		"updatedAt": "2023-04-09T08:13:39.195Z"
 	},
@@ -291,10 +275,10 @@ Get the list of users .
 		"name": "Paul",
 		"lastName": "Godrick",
 		"email": "pgodrick@gmail.com",
-		"password": "$2b$10$BBYD0N.6fC6IFNQcKkwnj.wHB4rRiUkifLuDcFNnqq2bcq0o04Ktu",
+		"password": "CONtraseñña18122022!!.wHB4rRiUkifLuDcFNnqq2bcq0o04Ktu",
 		"homeAddress": "Chesterfueld 122",
 		"age": 26,
-		"is_active": "active",
+		"is_active": "true",
 		"createdAt": "2023-04-09T17:16:21.917Z",
 		"updatedAt": "2023-04-09T17:16:21.917Z"
 	},
@@ -303,10 +287,10 @@ Get the list of users .
 		"name": "Victor",
 		"lastName": "Esparza",
 		"email": "vesparza@gmail.com",
-		"password": "$2b$10$SQ.LmsihSpgX4tbMPLZyPeMM74I9JYGY3zXlDBRd3nQfS4QNMLEEm",
+		"password": "CONtraseñña18122022!!",
 		"homeAddress": "Neterfield 989",
 		"age": 24,
-		"is_active": "active",
+		"is_active": "true",
 		"createdAt": "2023-04-09T17:18:27.241Z",
 		"updatedAt": "2023-04-09T17:18:27.241Z"
 	}
@@ -321,27 +305,27 @@ Allow the Authenticated User to update their details.
 
 **URL** : `/api/users/update/:id`
 
-**Method** : `POST`
+**Metodo** : `POST`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
 **Header**: x-access-token
 
 **Permissions required** : None
 
-**Data constraints**
+**Restricciones de Datos**
 
 ```json
 {
-	"name": "Pedro",
-	"lastName": "Porro",
-	"password": "123456"
+	"name": "String",
+	"lastName": "string",
+	"password": "string"
 }
 ```
 
 Note that `id` and `email` are currently read only fields.
 
-**Data examples**
+**Ejemplos de datos**
 
 Partial data is allowed.
 
@@ -351,7 +335,7 @@ Partial data is allowed.
 }
 ```
 
-## Success Responses
+## Response Exitosa
 
 **Condition** : Data provided is valid and User is Authenticated.
 
@@ -365,10 +349,10 @@ Partial data is allowed.
 	"name": "Pedro",
 	"lastName": "Porro",
 	"email": "miemail@gmail.com",
-	"password": "123456",
+	"password": "CONtraseñña18122022!!",
 	"homeAddress": "Lancaster 652",
 	"age": 48,
-	"is_active": "active",
+	"is_active": "true",
 	"createdAt": "2023-04-09T08:12:48.496Z",
 	"updatedAt": "2023-04-09T16:56:01.426Z",
 }
@@ -403,15 +387,15 @@ Allow the Authenticated User to delete their details and information.
 
 **URL** : `/api/users/:id`
 
-**Method** : `DELETE`
+**Metodo** : `DELETE`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
 **Header**: x-access-token
 
 **Permissions required** : None
 
-## Success Responses
+## Response Exitosa
 
 **Code** : `200 OK`
 
@@ -448,15 +432,15 @@ Get the list of properties .
 
 **URL** : `/api/properties/list`
 
-**Method** : `GET`
+**Metodo** : `GET`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
 **Header** : x-access-token
 
 **Permissions required** : None
 
-## Success Response
+## Response Exitosa
 
 **Code** : `200 OK`
 
@@ -493,15 +477,15 @@ Get the list of properties .
 
 **URL** : `/api/properties/list-available`
 
-**Method** : `GET`
+**Metodo** : `GET`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
 **Header** : x-access-token
 
 **Permissions required** : None
 
-## Success Response
+## Response Exitosa
 
 **Code** : `200 OK`
 
@@ -515,21 +499,21 @@ Get the list of properties .
 		"name": "Casa en venta 3hab San Fernando",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
 		"price": 40,
-		"available": "[available]"
+		"available": "[true]"
 	},
 	{
 		"id": "0303456789963",
 		"name": "Dpto en alquiler 1hab Palermo",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
 		"price": 95,
-		"available": "[available]"
+		"available": "[true]"
 	},
 	{
 		"id": "0303456789963",
 		"name": "Monoambiente alq Pehuajó",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
 		"price": 49,
-		"available": "[available]"
+		"available": "[true]"
 	}
 ]
 ``` 
@@ -540,42 +524,64 @@ Used to register a new property to offer.
 
 **URL** : `/api/properties/create`
 
-**Method** : `POST`
+**Metodo** : `POST`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
-**Data constraints**
+**Restricciones de Datos**
 
 ```json
 {	
-	"id": "[id]",
-	"name": "[valid name]",
-	"description": "[valid text plain description of the property]",
-	"address": "[valid text plain address of the property]",
-	"province": "[valid text plain province of the property]",
-	"country": "[valid text plain country of the property]",
-	"price": "[valid price amount that includes decimals]",
-	"available": "[valid text plain if the property is available]"
+	"id": "[integer]",
+	"name": "[string]",
+	"description": "[text]",
+	"images":"string url",
+	"address": "[string, valid text plain address of the property]",
+	"province": "[string, valid text plain province of the property]",
+	"country": "[string, valid text plain country of the property]",
+	"price": "[float, valid price amount that includes decimals]",
+	"available": "[boolean]",
+	"total_area":"string",
+	"bedrooms":"integer",
+	"bathrooms":"integer",
+	"garage":"integer",
+	"swimming_pool":"integer",
+	"balocny":"integer",
+	"elevator":"integer",
+	"antiquity":"STRING",
+	"property_id":"integer",
+	"created_at": "date",
+	"updated_at": "date",
 	}
 ```
 
-**Data example**
+**Ejemplos de datos**
 
 ```json
-{
-	"id": "6432f13b3413339193948eec",
-	"name": "[Monoambiente alq Pehuajó]",
-	"description": "[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.]",
-	"address": "[123 Fake street]",
-	"province": "[Montana]",
-	"country": "[Argentina]",
-	"price": "[150000]",
-	"available": "[available]"
-	
-}
+"result": {
+		"id": "03034567899",
+		"property_id":"",
+		"name": "Monoambiente alq Palermo pesos",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
+		"address": "123 fake street",
+		"province": "MOntana",
+		"country": "Argentina",
+		"price": 125000,
+		"available": "[true]",
+		"createdAt": "2023-04-09T08:12:48.496Z",
+		"updatedAt": "2023-04-09T16:56:01.426Z",
+		"total_area":"500",
+		"bedrooms":"4",
+		"bathroom":"2",
+		"garaje":"2",
+		"swimming_pool":"1",
+		"balcony":"0",
+		"elevator":"1",
+		"antiquity":"5"				
+	}
 ```
 
-## Success Response
+## Response Exitosa
 
 **Code** : `200 OK`
 
@@ -613,29 +619,40 @@ Trae la ficha de la propiedad seleccionada
 
 **URL** : `/api/properties/find/:id`
 
-**Method** : `GET`
+**Metodo** : `GET`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
 **Permissions required** : None
 
-## Success Response
+## Response Exitosa
 
 **Code** : `200 OK`
 
-**Content examples**
+**Ejemplos de contenido**
 
 ```json
 {
 	"result": {
 		"id": "03034567899",
+		"property_id":"",
 		"name": "Monoambiente alq Palermo pesos",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
 		"address": "123 fake street",
 		"province": "MOntana",
 		"country": "Argentina",
 		"price": 125000,
-		"available": "[Disponible]"
+		"available": "[true]",
+		"createdAt": "2023-04-09T08:12:48.496Z",
+		"updatedAt": "2023-04-09T16:56:01.426Z",
+		"total_area":"500",
+		"bedrooms":"4",
+		"bathroom":"2",
+		"garaje":"2",
+		"swimming_pool":"1",
+		"balcony":"0",
+		"elevator":"1",
+		"antiquity":"5"				
 	}
 }
 ```
@@ -655,30 +672,15 @@ Allow the Authenticated User as admin to update property info.
 
 **URL** : `/api/properties/update/:id`
 
-**Method** : `POST`
+**Metodo** : `POST`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
 **Header**: x-access-token
 
 **Permissions required** : None
 
-**Data constraints**
-
-```json
-{
-	"id": "0303456789963",
-	"name": "Monoambiente alq Pehuajó",
-	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
-	"address": "123 fake street",
-	"province": "MOntana",
-	"country": "Argentina",
-	"price": 185000,
-	"available": "[Disponible]"
-}
-```
-
-**Data examples**
+**Ejemplos de datos**
 
 Partial data is allowed.
 
@@ -688,7 +690,7 @@ Partial data is allowed.
 }
 ```
 
-## Success Responses
+## Response Exitosa
 
 **Condition** : Data provided is valid and User is Authenticated.
 
@@ -705,7 +707,7 @@ Partial data is allowed.
 	"province": "MOntana",
 	"country": "Argentina",
 	"price": 185000,
-	"available": "[Disponible]"
+	"available": "[true]"
 }
 ```
 
@@ -729,15 +731,15 @@ Partial data is allowed.
 
 **URL** : `/api/properties/:id`
 
-**Method** : `DELETE`
+**Metodo** : `DELETE`
 
-**Auth required** : YES
+**Requiere Autenticación** : YES
 
 **Header**: x-access-token
 
 **Permissions required** : None
 
-## Success Responses
+## Response Exitosa
 
 **Code** : `200 OK`
 
@@ -759,5 +761,4 @@ Partial data is allowed.
 {
     "Ocurrió un error al eliminar la propiedad."
 }
-``` 
-										//hasta acá seria lo nuestro <------
+```
