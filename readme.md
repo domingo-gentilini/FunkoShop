@@ -110,7 +110,7 @@ Used to register a new user.
 	"lastName": "Martinez",
 	"email": "amartinez@gmail.com",
 	"is_active": "true",
-	"id": "6438cb33d072af368825960e",
+	"id": "20221218",
 	"createdAt": "2023-04-14T03:40:35.226Z",
 	"updatedAt": "2023-04-14T03:40:35.226Z"
 }
@@ -170,7 +170,7 @@ subscription information.
 
 ```json
 {
-	"id": "643273b3a5ae2815da879f25",
+	"id": "20221218",
 	"name": "Pedro",
 	"lastName": "Porro",
 	"email": "pporro12@gmail.com",
@@ -211,7 +211,7 @@ Get the list of users .
 [
 
 	{
-		"id": "64327380a5ae2815da879f22",
+		"id": "20221218",
 		"name": "Pedro",
 		"lastName": "Porro",
 		"email": "miemail@gmail.com",
@@ -223,7 +223,7 @@ Get the list of users .
 		"updatedAt": "2023-04-09T16:56:01.426Z",
 	},
 	{
-		"id": "643273b3a5ae2815da879f25",
+		"id": "20221218",
 		"name": "Pedro",
 		"lastName": "Porro",
 		"email": "pporro12@gmail.com",
@@ -235,11 +235,11 @@ Get the list of users .
 		"updatedAt": "2023-04-09T08:13:39.195Z"
 	},
 	{
-		"id": "6432f2e57394e81b51fe8033",
+		"id": "20221218",
 		"name": "Paul",
 		"lastName": "Godrick",
 		"email": "pgodrick@gmail.com",
-		"password": "CONtraseñña18122022!!.wHB4rRiUkifLuDcFNnqq2bcq0o04Ktu",
+		"password": "CONtraseñña18122022!!",
 		"homeAddress": "Chesterfueld 122",
 		"age": 26,
 		"is_active": "true",
@@ -247,7 +247,7 @@ Get the list of users .
 		"updatedAt": "2023-04-09T17:16:21.917Z"
 	},
 	{
-		"id": "6432f3637394e81b51fe8036",
+		"id": "20221218",
 		"name": "Victor",
 		"lastName": "Esparza",
 		"email": "vesparza@gmail.com",
@@ -309,7 +309,7 @@ Partial data is allowed.
 
 ```json
 {
-	"id": "64327380a5ae2815da879f22",
+	"id": "20221218",
 	"name": "Pedro",
 	"lastName": "Porro",
 	"email": "miemail@gmail.com",
@@ -524,7 +524,7 @@ Used to register a new property to offer.
 ```json
 "result": {
 		"id": "03034567899",
-		"property_id":"",
+		"property_id":"20221218",
 		"name": "Monoambiente alq Palermo pesos",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ex tincidunt nunc molestie auctor.",
 		"address": "123 fake street",
