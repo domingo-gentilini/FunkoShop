@@ -19,7 +19,7 @@ npm install
 	iii. Open the `.env` file in a text editor.
 
 
-## Authentication
+# Authentication
 
 Open endpoints require no Authentication.
 
