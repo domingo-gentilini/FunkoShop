@@ -30,7 +30,7 @@ module.exports = {
     connection: pool.promise()
 };
 
-/*pool.getConnection ((error, connection) => {
+pool.getConnection ((error, connection) => {
     try {
         db.authenticate();
         console.log('database online');
@@ -38,4 +38,4 @@ module.exports = {
         throw new Error(error);
     }
     
-});*/
+});

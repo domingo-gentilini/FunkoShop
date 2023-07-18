@@ -9,8 +9,8 @@ const { notFound } = require('./src/utils/errorHandler.js');
 const { auth } = require('./src/middlewares/auth.js')
 
 /*import de rutas*/
-const itemsRoutes = require('./src/routes/itemsRoutes.js');
-const categoriesRoutes = require('./src/routes/categoriesRoutes.js');
+const itemsRoutes = require('./src/routes/items.Routes.js');
+const categoriesRoutes = require('./src/routes/categories.Routes.js');
 
 /*carpeta de archivo estaticos*/
 app.use(express.static("public"));
